@@ -1,5 +1,18 @@
-title: Your Name
-description: My site
-remote_theme: "jekyll/minima@1e8a445"
-url: https://username.github.io
+# title: Your Name
+# description: My site
+# remote_theme: "jekyll/minima@1e8a445"
+# url: https://username.github.io
 # baseurl: ""                  # optional for user/org sites
+
+title: My Site
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+plugins:
+  - jekyll-include-cache
+  # - jekyll-feed
+  # - jekyll-seo-tag
+  # - jekyll-sitemap
+
+# if this is a *project* site (not username.github.io):
+# url: https://username.github.io
+# baseurl: /your-repo
+
