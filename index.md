@@ -1,4 +1,8 @@
 ---
 layout: home
-author_profile:true
+title: "Home"
+paginate: 5
+author_profile: true
 ---
+
+Welcome to my site!
