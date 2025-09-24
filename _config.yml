@@ -1,5 +1,5 @@
 title: Your Name
 description: My site
-theme: jekyll-theme-minimal    # built-in theme
+theme: jekyll-theme-minima    # built-in theme
 url: https://username.github.io
 # baseurl: ""                  # optional for user/org sites
