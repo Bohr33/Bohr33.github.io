@@ -1,3 +1,5 @@
-theme:jekll-theme-minimal
-title: Bohr33's Homepage
-description: just a chill website for a chill guy
+title: Your Name
+description: My site
+theme: jekyll-theme-minimal    # built-in theme
+url: https://username.github.io
+# baseurl: ""                  # optional for user/org sites
