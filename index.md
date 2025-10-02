@@ -9,3 +9,5 @@ header:
 ---
 
 Welcome to my site!
+
+This site is meant to be a place to showcase my work as an 
