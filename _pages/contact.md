@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Contact"
+permalink: /contact/
 ---
 
 ## Get in Touch

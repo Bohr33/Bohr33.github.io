@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Ben Ward"
-  avatar           : "/assets/images/headshot.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/headshot.JPG"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an audio developer"
   location         : "West Michigan"
   email            :  "brw775586@gmail.com"
