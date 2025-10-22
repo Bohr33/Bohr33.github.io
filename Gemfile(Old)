@@ -1,0 +1,19 @@
+source "https://rubygems.org"
+gem "jekyll", "~> 4.3"
+
+
+
+group :jekyll_plugins do
+  gem "jekyll-remote-theme"
+  gem "jekyll-include-cache"
+  # optional extras:
+  # gem "jekyll-feed"
+  # gem "jekyll-seo-tag"
+  # gem "jekyll-sitemap"
+end
+
+# Use GitHub Pages to match the production environment
+gem "github-pages", group: :jekyll_plugins
+
+# Minimal Mistakes uses pagination; GitHub Pages supports the classic plugin
+gem "jekyll-paginate", group: :jekyll_plugins
