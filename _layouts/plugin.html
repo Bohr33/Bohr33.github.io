@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">---</p>
+<p class="p1">---</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;{{ page.title }} | {{ site.title }}&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>{%- seo -%}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="plugin-detail"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="breadcrumbs"&gt;&lt;a href="{{ '/' | relative_url }}"&gt;Home&lt;/a&gt; / &lt;a href="{{ '/plugins/' | relative_url }}"&gt;Plugins&lt;/a&gt;&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;{{ page.title }}&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- if page.subtitle -%}&lt;p class="subtitle"&gt;{{ page.subtitle }}&lt;/p&gt;{%- endif -%}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- if page.tags -%}&lt;p class="tags"&gt;{{ page.tags | join: ' · ' }}&lt;/p&gt;{%- endif -%}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>{%- if page.hero -%}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;figure class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="{{ page.hero | relative_url }}" alt="{{ page.title }} hero image"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/figure&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{%- endif -%}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;article class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{{ content }}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;section class="cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- if page.download_url -%}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="{{ page.download_url }}" target="_blank" rel="noopener"&gt;Download&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- endif -%}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- if page.repo_url -%}</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn ghost" href="{{ page.repo_url }}" target="_blank" rel="noopener"&gt;View Source&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{%- endif -%}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

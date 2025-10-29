@@ -334,5 +334,20 @@ defaults:
       layout: single
       author_profile: true
 
-      
+
+# Define Plugin Collection
+collections:
+  plugins:
+    output: true
+    permalink: /plugins/:slug/
+
+# Collection Options
+defaults:
+  - scope:
+      path: ""
+      type: plugins
+    values:
+      layout: plugin
+      image: /assets/plugins/default-thumb.jpg  # fallback
+
       

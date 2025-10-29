@@ -14,10 +14,13 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/plugins/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/plugins/</loc>
+<loc>http://localhost:4000/_pages/plugins/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/TODO/</loc>
