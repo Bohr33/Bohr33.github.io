@@ -1,3 +1,26 @@
+---
+---
+@import "minimal-mistakes/skins/default";  /* or your skin */
+@import "minimal-mistakes";                /* theme styles */
+
+/* Your overrides go AFTER the theme */
+// .plugins-page .plugin-grid { width: min(92vw, 1200px); }
+.plugins-page .plugin-card .thumb { aspect-ratio: 16/9; }
+/* …rest of your plugin CSS, all scoped to .plugins-page */
+
+// .plugins-page {
+//   width: 60vw;
+//   margin: auto;
+// }
+// .archive {
+//   margin: auto;
+// }
+
+.archive{
+  float:none;
+  margin: auto;
+}
+
 /* === Plugin Grid Section === */
 .plugin-grid {
   display: grid;
@@ -59,11 +82,4 @@
   display: flex;
   gap: .4rem;
   flex-wrap: wrap;
-}
-
-.plugin-card .tags li {
-  font-size: .75rem;
-  background: #f2f2f2;
-  border-radius: 999px;
-  padding: .15rem .5rem;
 }
