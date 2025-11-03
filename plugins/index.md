@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: splash
 classes: wide
 title: "Plugins"
 author_profile: false
