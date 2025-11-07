@@ -4,8 +4,6 @@ title: "Contact"
 permalink: /contact/
 ---
 
-## Get in Touch
-
 You can reach me at:
 
 - **Email:** [brw775586@gmail.com](mailto:brw775576@gmail.com)  
