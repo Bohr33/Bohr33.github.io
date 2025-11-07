@@ -13,8 +13,8 @@
 
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "neon" # "mint", "aqua", "air", "dark", "dirt", "contrast", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -123,7 +123,7 @@ collections:
 author:
   name             : "Ben Ward"
   avatar           : "/assets/images/headshot.JPG"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an audio developer"
+  bio              : "Audio Developer and Researcher focusing on DSP for creative applications"
   location         : "West Michigan"
   email            :  "brw775586@gmail.com"
   links:

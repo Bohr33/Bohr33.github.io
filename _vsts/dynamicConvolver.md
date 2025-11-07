@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Dynamic Convolver"
-thumb: /assets/plugins/effect1/Dynamic.png
+thumb: /assets/plugins/dynamic-convolver.png
 ---
 This is the Dynamic Convlver
 

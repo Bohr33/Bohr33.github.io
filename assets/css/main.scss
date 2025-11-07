@@ -1,6 +1,8 @@
 ---
 ---
-@import "minimal-mistakes/skins/default";  /* or your skin */
+// @import "minimal-mistakes/skins/default";  /* or your skin */
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";                /* theme styles */
 
 /* Your overrides go AFTER the theme */
