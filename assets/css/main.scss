@@ -7,21 +7,9 @@
 
 /* Your overrides go AFTER the theme */
 // .plugins-page .plugin-grid { width: min(92vw, 1200px); }
-.plugins-page .plugin-card .thumb { aspect-ratio: 16/9; }
+.plugin-content-page .plugins-page .plugin-card .thumb { aspect-ratio: 16/9; }
 /* …rest of your plugin CSS, all scoped to .plugins-page */
 
-// .plugins-page {
-//   width: 60vw;
-//   margin: auto;
-// }
-// .archive {
-//   margin: auto;
-// }
-
-// .archive{
-//   float:none;
-//   margin: auto;
-// }
 
 /* === Plugin Grid Section === */
 .plugin-grid {
@@ -85,4 +73,32 @@
   display: flex;
   gap: .4rem;
   flex-wrap: wrap;
+}
+
+
+/* === Plugin Page Default === */
+.plugin-content-page {
+  margin: auto;
+}
+
+.plugin-content-page h1{
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.plugin-content-page img{
+  padding: inherit;
+  width: 80%;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plugin-content-page h2{
+  padding-top: 2rem;
+  font-size:40px;
 }

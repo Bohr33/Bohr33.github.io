@@ -10,7 +10,7 @@ Hello! I’m an audio developer, researcher, and musician interested in building
 Fascinated by digital signal processing (DSP) and its potential for expressive sound manipulation, I continued my studies at Maynooth University, earning a Master’s degree in Music and Sound Computing. Currently, my goal is to apply these skills in real-world contexts, either as a developer, researcher, or sound designer, to create tools that inspire new ways of making and interacting with sound.
 
 
-# Developer
+## Developer
 As a developer, my work centers on creating digital audio tools for musicians and sound designers. My early experiments with Max/MSP and Csound during my undergraduate studies sparked my interest in DSP and real-time sound synthesis.
 
 Today, I primarily develop in C and C++, using frameworks such as JUCE for plugin creation and working with microcontrollers like the Arduino, Raspberry Pi, and Bela for embedded audio systems.
@@ -18,7 +18,7 @@ Today, I primarily develop in C and C++, using frameworks such as JUCE for plugi
 Many of my audio projects are available on my GitHub, and you can explore my collection of plugins [here](https://bohr33.github.io/plugins/).
 
 
-# Musician
+## Musician
 <!-- ![Image of me playing the drums]({{ 'assets/images/DrumColor.jpg' | relative_url }}) -->
 
 As a musician, I’m interested in both performance and composition. I grew up playing drums in symphonic and jazz ensembles, a passion I continued throughout college. My time in the Electronic Production and Design program also introduced me to electronic musical performance, which inspired me to begin composing and performing electronic music of my own.

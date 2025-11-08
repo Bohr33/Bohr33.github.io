@@ -6,31 +6,31 @@ var store = [{
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Dynamic Convolver",
-        "excerpt":"This is the Dynamic Convlver   This is a plugin!!!!  ","categories": [],
+        "excerpt":"Dynamic Convolver About The Dynamic Convolver was my final thesis project for my undergraduate course at Berklee. I was inspired to make this after learning about convolution, and how easy it was to implement within Csound. Convolution is a complex algorithm that takes to arrays and operates on them in...","categories": [],
         "tags": [],
         "url": "/plugins/dynamicconvolver/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Mapping Sequencer",
-        "excerpt":"Body content here…   This plugin was made using max/msp and is designed as a sequencer like device that allows for alterering arbitrary sequences that can be mapped to mappable parameters within Ableton Live.  ","categories": [],
+        "excerpt":"Mapping Sequencer About The Mapping Sequencer is a simple Max4Live device that allows a global sequencer to control up to 16? different mappable parameters within Live. t was inspired by the other mappable Max4Live devices built into Ableton Live. Having found those very useful, I wanted to build a similar...","categories": [],
         "tags": [],
         "url": "/plugins/mapping-sequencer/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Pulse",
-        "excerpt":"Body content here…   This is a plugin!!!!  ","categories": [],
+        "excerpt":"Pulse About I created this plugin one day after I was wanting a device that would allow me to craft my own drum samples, since I found it very time consuming to make my own through other softwares. This gave the idea for a plugin that was dedicated to making...","categories": [],
         "tags": [],
         "url": "/plugins/pulse/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Sample Sequencer",
-        "excerpt":"Body content here…   This is a device made with Max/MSP that allows the user to upload a bank of samples and generate sequences with the samples that allow for further editing of playback parameters for each sample step.  ","categories": [],
+        "excerpt":"Sample Sequencer About The Sample Sequencer is a Max4Live device that allows for controlling the splicing of and manipulation of an uploaded audio file via an 8 step sequencer. This device was inspired by some of the unique, stuttering effect produced by artist who incorperate unique sampling operations into their...","categories": [],
         "tags": [],
         "url": "/plugins/sample-sequencer/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Schroeder Verb",
-        "excerpt":"Body content here…   This is a reverb plugin made in Csound inspiried by Schroeder’s Original Reverb Design.  ","categories": [],
+        "excerpt":"Schroeder-Verb About I made this plugin while I was learning the basic of Cabbage plugin design and thought that emulation of an early digital reverb would make a great starting project. The emulated reverb in this plugin is objectively very cheap sounded, and pales in comparison to modern reverb emulations,...","categories": [],
         "tags": [],
         "url": "/plugins/schroder/",
         "teaser": "/assets/images/output.jpg"
