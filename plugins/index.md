@@ -4,7 +4,7 @@ classes: wide
 title: "Plugins"
 author_profile: false
 header:
-  overlay_image: /assets/images/output.png
+  overlay_image: /assets/images/panular.png
   overlay_filter: 0.5
 title: Plugins
 permalink: /plugins/

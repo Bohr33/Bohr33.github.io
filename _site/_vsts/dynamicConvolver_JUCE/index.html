@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Website TO-DO - Ben Ward - Audio DSP Developer</title>
+<!-- begin _includes/seo.html --><title>Dynamic Convolver (JUCE) - Ben Ward - Audio DSP Developer</title>
 <meta name="description" content="A Website to highlight my work in audio developement, particularly my plugins">
 
 
@@ -21,8 +21,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Ben Ward - Audio DSP Developer">
-<meta property="og:title" content="Website TO-DO">
-<meta property="og:url" content="http://localhost:4000/TODO/">
+<meta property="og:title" content="Dynamic Convolver (JUCE)">
+<meta property="og:url" content="http://localhost:4000/_vsts/dynamicConvolver_JUCE/">
 
 
   <meta property="og:description" content="A Website to highlight my work in audio developement, particularly my plugins">
@@ -42,7 +42,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/TODO/">
+<link rel="canonical" href="http://localhost:4000/_vsts/dynamicConvolver_JUCE/">
 
 
 
@@ -82,7 +82,7 @@
 
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--splash wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -148,196 +148,36 @@
     <div class="initial-content">
       
 
-
-
-
-
 <div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Dynamic Convolver (JUCE)">
+    
+    
+    
 
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="http://localhost:4000/">
-        <img src="/assets/images/headshot.JPG" alt="Ben Ward" itemprop="image" class="u-photo">
-      </a>
+    <section class="page__content" itemprop="text">
+      <div class="plugin-content-page">
+    <h1>Dynamic Convolver</h1>
+    <div class="flex-container">
+        <img src="/assets/plugins/dConv(JUCE).png" alt="Image of Dynamic Convolver Plugin" />
     </div>
-  
+    <h2 class="plugin-content-page">About</h2>
+    <p>This project began as an exercise in C++ programming with JUCE, inspired by a convolution plugin I originally developed during my undergraduate studies using Csound and Cabbage, titled the <em>Dynamic Convolver</em>. That earlier version implemented standard convolution processing but allowed the user to isolate a specific region of an impulse response or audio file and manipulate the processing position in real time. This new version represents my attempt to recreate and expand that concept entirely in C++ within the JUCE framework.</p>
 
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Ben Ward</a>
-    </h3>
+
+<h3>Development</h3>
+<p>One of the most significant challenges in developing this plugin was implementing the convolution engine from scratch. While JUCE provides a built-in convolution module, it does not expose enough of its internal processing to support the level of customization I needed. As a result, I wrote my own convolution class to gain full control over the DSP flow and enable more experimental features.</p>
+
+<h3>Features</h3>
+<p>In its current state, this version of the Dynamic Convolver functions like a standard convolution processor: users can load an impulse response (or any audio file) and adjust the Dry/Wet control to blend the processed signal. The novel functionality comes from the file-positioning controls and visual display. Once a file is loaded, it appears on the GUI, and the <strong>File Position</strong> and <strong>File Length</strong> parameters define a highlighted region—representing the portion of the file used for convolution. This allows users to “focus” the convolution on any segment of the impulse response.</p>
+
+<p>At present, adjusting the File Position parameter during real-time playback may produce choppy results due to the abrupt shift in the convolution window. Future updates aim to smooth this behavior, likely through interpolation or buffered transitions, improving performance for dynamic, real-time manipulation.</p>
+
     
-      <div class="author__bio p-note" itemprop="description">
-        <p>Audio Developer, Researcher, and Musician</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">West Michigan</span>
-        </li>
-      
-
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:brw775586@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="brw775586@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
 </div>
 
-  
-  </div>
-
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Website TO-DO">
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/TODO/" itemprop="url">Website TO-DO
-</a>
-          </h1>
-          
-
-
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <h1 id="website-to-do">Website TO-DO</h1>
-
-<h3 id="home-page">Home Page</h3>
-<ul>
-  <li>Add content, specifically some type of inroduction and maybe portfolio showcase</li>
-  <li>portfolio showcase</li>
-  <li>Updated Photo</li>
-</ul>
-
-<h3 id="about-page">About Page</h3>
-<ul>
-  <li></li>
-</ul>
-
-<h3 id="contact-page">Contact Page</h3>
-
-<h3 id="plugin-page">Plugin Page</h3>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-
-      </footer>
-
-      
-
-      
-
-    </div>
-
-    
+    </section>
   </article>
-
-  
-  
 </div>
 
       

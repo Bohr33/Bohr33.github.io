@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "neon" # "mint", "aqua", "air", "dark", "dirt", "cont
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ben Ward's Audio Developer Website"
+title                    : "Ben Ward - Audio DSP Developer"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Benjamin Ward"

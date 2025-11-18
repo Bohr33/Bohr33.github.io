@@ -92,6 +92,13 @@
   width: 80%;
 }
 
+.plugin-content-page img{
+  max-height: 70vh;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
 .flex-container{
   display: flex;
   justify-content: center;
@@ -102,3 +109,12 @@
   padding-top: 2rem;
   font-size:40px;
 }
+
+/* site accent override */
+.archive a, .archive a:visited { color: #cf3c3c; }
+.page__content a, .page__content a:visited { color: #cf3c3c; }
+.greedy-nav .visible-links a::before { background: #cf3c3c; }
+
+// .btn, .button, .link-button { background-color: #0fa3a3; border-color: #0fa3a3; color: #fff; }
+
+// .btn:hover, .button:hover { background-color: darken(#0fa3a3, 6%); }

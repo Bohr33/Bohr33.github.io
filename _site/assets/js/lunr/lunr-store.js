@@ -11,6 +11,12 @@ var store = [{
         "url": "/plugins/dynamicconvolver/",
         "teaser": "/assets/images/output.jpg"
       },{
+        "title": "Dynamic Convolver (JUCE)",
+        "excerpt":"Dynamic Convolver About This project began as an exercise in C++ programming with JUCE, inspired by a convolution plugin I originally developed during my undergraduate studies using Csound and Cabbage, titled the Dynamic Convolver. That earlier version implemented standard convolution processing but allowed the user to isolate a specific region...","categories": [],
+        "tags": [],
+        "url": "/plugins/dynamicconvolver-juce/",
+        "teaser": "/assets/images/output.jpg"
+      },{
         "title": "Mapping Sequencer",
         "excerpt":"Mapping Sequencer About The Mapping Sequencer is a simple Max4Live device that allows a global sequencer to control up to 16? different mappable parameters within Live. t was inspired by the other mappable Max4Live devices built into Ableton Live. Having found those very useful, I wanted to build a similar...","categories": [],
         "tags": [],
@@ -33,5 +39,11 @@ var store = [{
         "excerpt":"Schroeder-Verb About I made this plugin while I was learning the basic of Cabbage plugin design and thought that emulation of an early digital reverb would make a great starting project. The emulated reverb in this plugin is objectively very cheap sounded, and pales in comparison to modern reverb emulations,...","categories": [],
         "tags": [],
         "url": "/plugins/schroder/",
+        "teaser": "/assets/images/output.jpg"
+      },{
+        "title": "Spectral Processor",
+        "excerpt":"Spectral Processor About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s...","categories": [],
+        "tags": [],
+        "url": "/plugins/spectralprocessor/",
         "teaser": "/assets/images/output.jpg"
       }]

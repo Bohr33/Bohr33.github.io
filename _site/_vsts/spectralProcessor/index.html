@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Website TO-DO - Ben Ward - Audio DSP Developer</title>
+<!-- begin _includes/seo.html --><title>Spectral Processor - Ben Ward - Audio DSP Developer</title>
 <meta name="description" content="A Website to highlight my work in audio developement, particularly my plugins">
 
 
@@ -21,8 +21,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Ben Ward - Audio DSP Developer">
-<meta property="og:title" content="Website TO-DO">
-<meta property="og:url" content="http://localhost:4000/TODO/">
+<meta property="og:title" content="Spectral Processor">
+<meta property="og:url" content="http://localhost:4000/_vsts/spectralProcessor/">
 
 
   <meta property="og:description" content="A Website to highlight my work in audio developement, particularly my plugins">
@@ -42,7 +42,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/TODO/">
+<link rel="canonical" href="http://localhost:4000/_vsts/spectralProcessor/">
 
 
 
@@ -82,7 +82,7 @@
 
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--splash wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -148,196 +148,27 @@
     <div class="initial-content">
       
 
-
-
-
-
 <div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Spectral Processor">
+    
+    
+    
 
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="http://localhost:4000/">
-        <img src="/assets/images/headshot.JPG" alt="Ben Ward" itemprop="image" class="u-photo">
-      </a>
+    <section class="page__content" itemprop="text">
+      <div class="plugin-content-page">
+    <h1>Spectral Processor</h1>
+    <div class="flex-container">
+        <img src="/assets/plugins/specGrain.png" alt="Image of Dynamic Convolver Plugin" />
     </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Ben Ward</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>Audio Developer, Researcher, and Musician</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">West Michigan</span>
-        </li>
-      
-
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:brw775586@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="brw775586@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
+    <h2 class="plugin-content-page">About</h2>
+    <p>The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.</p>
+    <p>Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.</p>
+    <p>I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.</p>
 </div>
 
-  
-  </div>
-
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Website TO-DO">
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/TODO/" itemprop="url">Website TO-DO
-</a>
-          </h1>
-          
-
-
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <h1 id="website-to-do">Website TO-DO</h1>
-
-<h3 id="home-page">Home Page</h3>
-<ul>
-  <li>Add content, specifically some type of inroduction and maybe portfolio showcase</li>
-  <li>portfolio showcase</li>
-  <li>Updated Photo</li>
-</ul>
-
-<h3 id="about-page">About Page</h3>
-<ul>
-  <li></li>
-</ul>
-
-<h3 id="contact-page">Contact Page</h3>
-
-<h3 id="plugin-page">Plugin Page</h3>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-
-      </footer>
-
-      
-
-      
-
-    </div>
-
-    
+    </section>
   </article>
-
-  
-  
 </div>
 
       
