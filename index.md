@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.5
 ---
 ## Welcome
-I’m an audio developer and sound designer exploring the intersection of music, technology, and digital creativity.
+I’m an audio developer, sound designer, and musican interested in exploring the creative possibilies of digital audio. Most of my work involves creating digital plugins, with a specific focus on implementing novel DSP algorthims and creating unique and inspiring interfaces.
 
 This website showcases my work in audio software development, sound design, and research in digital signal processing. Here you’ll find a collection of my VST plugins, open-source projects, and research experiments all centered around creative approaches to sound.
 

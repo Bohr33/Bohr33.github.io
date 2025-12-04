@@ -1,6 +1,6 @@
 var store = [{
-        "title": "Hello, World!",
-        "excerpt":"This is my very first blog post using Minimal Mistakes.      Posts live in the _posts folder.   The filename must follow YYYY-MM-DD-title.md.   You can add categories and tags to group your posts.  ","categories": ["blog"],
+        "title": "Reviving Magenta's Tensorflow Library",
+        "excerpt":"Recently I’ve completed my thesis outlining my work updating an outdated tensorflow library used for many early neural audio synthesis projects. This project served as my final thesis for my Master’s degree at Maynooth University. My initial goal for the project was to implementing some of these earlier projects into...","categories": ["blog"],
         "tags": ["intro","welcome"],
         "url": "/blog/hello/",
         "teaser": "/assets/images/output.jpg"
