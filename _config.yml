@@ -117,12 +117,15 @@ collections:
     vsts:
         output: true
         permalink: /plugins/:slug/
+    projects:
+        output: true
+        permalink: /projects/:name/
 
 
 # Site Author
 author:
   name             : "Ben Ward"
-  avatar           : "/assets/images/headshot.JPG"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/me/Headshot2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Audio Developer, Researcher, and Musician"
   location         : "West Michigan"
   email            :  "brw775586@gmail.com"
@@ -228,6 +231,8 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
 
 
 # Sass/SCSS
@@ -313,6 +318,11 @@ defaults:
     values:
       layout: plugin
       image: /assets/images/bio-photo.jpg
+  - scope:
+      path: ""
+      typee: projects
+    values:
+      layout: projects
 
 
 

@@ -2,7 +2,25 @@ var store = [{
         "title": "Reviving Magenta's Tensorflow Library",
         "excerpt":"Recently I’ve completed my thesis outlining my work updating an outdated tensorflow library used for many early neural audio synthesis projects. This project served as my final thesis for my Master’s degree at Maynooth University. My initial goal for the project was to implementing some of these earlier projects into...","categories": ["blog"],
         "tags": ["intro","welcome"],
-        "url": "/blog/hello/",
+        "url": "/blog/hello-2/",
+        "teaser": "/assets/images/output.jpg"
+      },{
+        "title": "Spectral Processing and the Phase Vocoder",
+        "excerpt":"This post is an overview of my experience creating a spectral processing plugin, the challenges involved, and a general overview of some of the processes I learned about, with specific reference to th Phase Vocoder. During my Master’s program, one of my required courses, Musical Signal Processing, served as my...","categories": ["blog"],
+        "tags": ["DSP","plugins"],
+        "url": "/blog/PhaseVocoder/",
+        "teaser": "/assets/images/output.jpg"
+      },{
+        "title": "Iannix + Csound: A Parametric Music System",
+        "excerpt":"Iannix Iannix + Csound: A Parametric Music System Project Overview This project explores the integration of IanniX’s visual graphing capabilities with Csound’s synthesis engine. The final result is a parametric music system which utilizes the contour lines of a 3D shape, programmed within the IanniX system, to inform oscillator parameters...","categories": [],
+        "tags": [],
+        "url": "/projects/project-one/",
+        "teaser": "/assets/images/output.jpg"
+      },{
+        "title": "Project 2",
+        "excerpt":"Hello!  ","categories": [],
+        "tags": [],
+        "url": "/projects/project-two/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Dynamic Convolver",
@@ -42,7 +60,7 @@ var store = [{
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Spectral Processor",
-        "excerpt":"Spectral Processor About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s...","categories": [],
+        "excerpt":"Spectral Processor View on GitHub About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder....","categories": [],
         "tags": [],
         "url": "/plugins/spectralprocessor/",
         "teaser": "/assets/images/output.jpg"

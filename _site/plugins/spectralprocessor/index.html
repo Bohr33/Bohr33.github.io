@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Spectral Processor - Ben Ward - Audio DSP Developer</title>
-<meta name="description" content="Spectral Processor                        About     The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.     Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.     I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
+<meta name="description" content="Spectral Processor                                       View on GitHub               About     The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.     Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.     I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
 
 
   <meta name="author" content="Ben Ward">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/spectralprocessor/">
 
 
-  <meta property="og:description" content="Spectral Processor                        About     The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.     Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.     I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
+  <meta property="og:description" content="Spectral Processor                                       View on GitHub               About     The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.     Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.     I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-  <meta property="article:published_time" content="2025-12-03T22:26:29-05:00">
+  <meta property="article:published_time" content="2026-02-12T20:24:54-05:00">
 
 
 
@@ -85,6 +85,15 @@
 <!-- end custom head snippets -->
 
   </head>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <body class="layout--splash wide" dir="ltr">
     <nav class="skip-links">
@@ -155,7 +164,7 @@
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Spectral Processor">
-    <meta itemprop="description" content="    Spectral Processor                    About    The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.    Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.    I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
+    <meta itemprop="description" content="    Spectral Processor                                 View on GitHub            About    The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.    Beyond these established techniques, I introduced a new effect I call Spectral Stretch. Similar to spectral blur, this effect holds phase-vocoder frames in a buffer and processes them over time, but it adds control over the density and playback rate of the buffered frames, enabling a wider range of time-smearing and granular-like transformations.    I also added an experimental feature called Freq Delay, which modifies the behavior of the spectral delay effect. Traditional implementations delay only the amplitude data, but Freq Delay optionally delays both amplitude and frequency information. In practice, this produces a unique, more pronounced spectral displacement that can be just as musically useful as amplitude only delay.">
     
     
 
@@ -164,6 +173,11 @@
     <h1>Spectral Processor</h1>
     <div class="flex-container">
         <img src="/assets/plugins/specGrain.png" alt="Image of Dynamic Convolver Plugin" />
+    </div>
+    <div class="plugin-links">
+    <a href="https://github.com/Bohr33/SpecGrain_Plugin" class="btn btn-primary" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+    </a>
     </div>
     <h2 class="plugin-content-page">About</h2>
     <p>The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.</p>
@@ -216,7 +230,7 @@
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2013 - 2025 <a href="http://localhost:4000">Ben Ward - Audio DSP Developer</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2013 - 2026 <a href="http://localhost:4000">Ben Ward - Audio DSP Developer</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

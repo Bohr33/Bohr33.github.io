@@ -81,8 +81,17 @@
 <!-- end custom head snippets -->
 
   </head>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--collection wide" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -150,58 +159,210 @@
 
 
 
-
-
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Projects">
-    
-    
-    
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/projects/" itemprop="url">Projects
-</a>
-          </h1>
-          
-
-
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <p>These are my projects!</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-
-      </footer>
-
-      
-
-      
-
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/me/Headshot2.jpg" alt="Ben Ward" itemprop="image" class="u-photo">
+      </a>
     </div>
+  
 
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Ben Ward</a>
+    </h3>
     
-  </article>
+      <div class="author__bio p-note" itemprop="description">
+        <p>Audio Developer, Researcher, and Musician</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">West Michigan</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:brw775586@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="brw775586@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
 
   
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Projects</h1>
+    
+    <div><div class="projects-grid"><a class="projects-card" href="/projects/project-one/">
+          <div class="thumb">
+            <img src="" alt="Iannix + Csound: A Parametric Music System" />
+          </div>
+          <div class="meta">
+            <h2>Iannix + Csound: A Parametric Music System</h2><ul class="tags"></ul></div>
+        </a><a class="projects-card" href="/projects/project-two/">
+          <div class="thumb">
+            <img src="" alt="Project 2" />
+          </div>
+          <div class="meta">
+            <h2>Project 2</h2><ul class="tags"></ul></div>
+        </a></div></div>
+
+
+
+<div class="entries-grid">
   
+
+
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/output.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/projects/project-one/" rel="permalink">Iannix + Csound: A Parametric Music System
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Iannix Iannix + Csound: A Parametric Music System
+
+Project Overview
+
+</p>
+  </article>
+</div>
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/output.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/projects/project-two/" rel="permalink">Project 2
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">Hello!
+</p>
+  </article>
+</div>
+
+</div>
+
+  </div>
 </div>
 
       
@@ -245,7 +406,7 @@
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2013 - 2025 <a href="http://localhost:4000">Ben Ward - Audio DSP Developer</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2013 - 2026 <a href="http://localhost:4000">Ben Ward - Audio DSP Developer</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
