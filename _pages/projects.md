@@ -5,6 +5,9 @@ permalink: /projects/
 collection: projects
 entries_layout: grid
 classes: wide
+header:
+  overlay_image: /assets/images/panular.png
+  overlay_filter: 0.5
 ---
 
 <div>

@@ -4,8 +4,25 @@ classes: wide
 title: "Iannix + Csound: A Parametric Music System"
 author_profile: false
 ---
-# Iannix + Csound: A Parametric Music System
+
+<div class="project-header">
+	<h1>Iannix + Csound: A Parametric Music System</h1>
+</div>
+
 ![Engaging Photo of Project](/assets/images/iannix/IanniX_Capture_Mobius_Alt1.png)
+
+<div class="project-links">
+	<a href="https://github.com/Bohr33/IanniX-Csound-Mobius">
+	<i class="fab fa-github fa-2x"></i> 
+	Bohr33
+	</a>
+	<a href="https://youtu.be/1yTJJhVw4dw">
+	<i class="fab fa-youtube fa-2x"></i>
+	BWAudioProgramming
+	</a>
+</div>
+
+
 ### Project Overview
 
 This project explores the integration of IanniX's visual graphing capabilities with Csound's synthesis engine. The final result is a parametric music system which utilizes the contour lines of a 3D shape, programmed within the IanniX system, to inform oscillator parameters within a constrained musical system in Csound. The control capabilities within IanniX allow for the resulting composition to not only be a static, generative piece, but also an interactive system that encourages the user to distort the original parameters to explore the sonic relationships defined within the space.
@@ -224,12 +241,12 @@ By calling itself, this opcode continuously instantiates new instances of `instr
 giNotes[] fillarray -3, 0, 4, 7, 11, 14, 16
  ```
 
+ **Transposing via Trigger**  
+The trigger data collected in instr 1 is used to create a random transposition effect on the oscillators periodically throughout the performance. This is achieved by feeding the processed trigger signal from instr 1 into a random generator that produces integer values between -3 and 3. This value is stored in a global variable and retrieved within instr 3. Whenever the trigger signal is activated, it updates the transposition value in instr 3, and this value is sent to all the oscillators, transposing the entire musical effect at the same time. A portk opcode was also added to create a glide between the new notes when a new transposition occurs.
 
- **Transposing via Trigger** \\
-The trigger data collected in `instr 1` is used to create a random tranposition effect on the oscillators periodically throughout the performance. This is done by using the processed trigger signal in `instr 1` to generate a random value -3, and 3. This is stored in a global variable and retrieved within `instr 3`. Whenever the trigger signal is activated, this updates the new transposition value in `instr 3`, and this value is sent to all the oscillators, transposing the entire musical effect at the same time. A `portk` opcode was also added to created a glide between the new notes when a new transpostion occurs. 
+**Score Editor**  
+Lastly, we need to instruct our instruments to run when we press play. This is done by adding a score in the Score Editor. Note that instrument 3 requires an extra argument, p4, that represents our curve/instrument ID, which we pass a value of 0.
 
-**Score Editor** \\
- Lastly, we need to instruct our insruments to run when we press play. This is done by adding a score in the Score Editor. Note that instrument 3 requires an extra argument, p4, that represents our curve/instrument ID, which we pass a value of 0.
 
 ```
 i1 0 1000
@@ -237,47 +254,48 @@ i2 0 1000
 i3 0 1000 0
 ```
 
+## Running the System**  
+Once both files are properly set up, to run the complete performance with both applications, we simply need to press play in both the IanniX transport system and Csound. If OSC communication is properly set up, then we should be able to hear our array of oscillators panned across the stereo field, shifting notes in seemingly random ways.
 
-## Running the System
-Once both files are properly settup, to run the complete performance with both applications, we simply need to press play in both the Iannix transport system and Csound. If OSC communication is properly settup, then we should be able hear our array of oscillators panned across the stereo field, shifting notes in seemingly random ways. 
-
-**Debugging Communication Issues**
-If the Csound file plays, but the tones are static, then this means it isn't receiving the data from Iannix. If this happens, ensure both Iannix and the `OSCInit` opcodes using the same host network; sometimes the OSC system in CSound can be a little buggy, so it can be useful to use an OSC monitoring application for debugging. 
+**Debugging Communication Issues**  
+If the Csound file plays but the tones are static, then this means it isn't receiving the data from IanniX. If this happens, ensure both IanniX and the OSCinit opcode are using the same host/network; sometimes the OSC system in Csound can be a little buggy, so it can be useful to use an OSC monitoring application for debugging.
 
 ### Interacting with the Performance
-Now that the performance is running, we can use the `param_` varaibles implemented in the mobius strip equation to alter both the visual shape being displayed, and the data that is being sent to Csound, thus altering the produced sound. In Iannix, under `Inspector->Objects`, we can select our group of cursors, then go to the `info` tab of the inspector to gain access to our parameter sliders. By moving these sliders, we update the variables within our written equation and Iannix will in turn update the curves and cursors. By incorperating 5 different parameters, we can mangle the shape in a lot of interesting ways, creating a unique visual, and audio effect.
+Now that the performance is running, we can use the `param_` variables implemented in the Möbius strip equation to alter both the visual shape being displayed and the data sent to Csound, thereby changing the produced sound. In IanniX, under `Inspector > Objects`, select our group of cursors, then go to the `info` tab in the inspector to access the parameter sliders. By moving these sliders, we update the variables within the equation, and IanniX will in turn update the curves and cursors. By incorporating 5 different parameters, we can mangle the shape in many interesting ways, creating unique visual and audio effects.
+
 ![Image of Iannix Params](/assets//images/iannix/Iannix_Parameters.png)
 
+**Note:** Changing parameters will cause the OSC data to update immediately, often resulting in harsh jumps in the audio output. The best way to address this is by using an opcode like `portk` in Csound to smooth out abrupt changes during audio processing, rather than trying to buffer or delay the OSC messages (unless you're specifically aiming for lower-resolution OSC communication).
 
-**Note:** Changing parameters will cause the OSC data to update immediately, likely causing harsh jumps in the audio output. The best way to solve this issue is by using an opcode like `portk` for smoothing out harsh changes within the Csound audio process, and not try and buffer or delay the OSC messages unless you are specifcally looking for a lower resolution in the OSC message commmunication.
+Below are some visual results from experiments with changing the parameters:
 
-Below are some of the visual results from experiments with changing the parameters
-![Iannix Output wiht New Params](/assets/images/iannix/IanniX_Capture_Mobius_Alt1.png)
+![Iannix Output with New Params](/assets/images/iannix/IanniX_Capture_Mobius_Alt1.png)
 
 ### Moving Cursors
-Another useful feature of Iannix, especially for this project, is the ability to set cursor start positions. Within a cursor's settings in the inspector, we can alter some the time based behavior of individual cursors. This is great for creating variance between cursors which are folowing similar paths. 
+Another useful feature of IanniX, especially for this project, is the ability to set cursor start positions. Within a cursor's settings in the inspector, we can adjust some of the time-based behavior of individual cursors. This is great for creating variance between cursors that follow similar paths.
 
 ![Iannix Cursor Time Settings](/assets/images/iannix/Iannix_Cursor_Time_Settings.png)
 
-Along with the inspector panel, we can also set these options within the script editor. For instance, in this project, when each cursors starts at the same position, the generated audio is almost identical for each oscillator. While it is interesting to hear the subtle detuning that happens as these cursors diverge, we might want a more chaotic result right off the bat. We can use the script editor to offset the starting position of these cursors at the beginning of the performance. For this example, I simply used of the increment variables to add to an offset variable. On each loop pass, this variable is increment by an arbitrary value, then the following command is run.
+In addition to the inspector panel, these options can also be set via the script editor. For instance, in this project, when all cursors start at the same position, the generated audio is almost identical across oscillators. While it is interesting to hear the subtle detuning that occurs as the cursors gradually diverge, we might prefer a more chaotic result right from the start. We can use the script editor to offset the starting positions of the cursors at the beginning of the performance. In this example, a loop is employed and the following command is executed for each curve:
+
+
 ```
 run("setoffset current " + offset + " 0 0");
 ```
-The result is the same mobius curve pattern, with each cursor beginning in random places throughout the curve. 
-![Mobius with Offset Cursors](/assets/images/iannix/Iannix_Distributed_Cursors.png)
+
+This instructs the currently selected curve to start at an offset determined by the `offset` variable, which increments on every loop pass. The result is an even distribution of cursors spread further around the Möbius curve, ordered by their IDs. However, there are many other interesting ways to distribute the cursors—for example, by adjusting their speeds (an approach not explored in this project, but one that would likely yield interesting results).
+
+
 
 
 ## Conclusion
-The purpose of this project was to experiment with Iannix and explore the capabillities of using a graphical data system to control an audio engine, and specifically Csound. I found the project very successful in coming up with an interesting visual, and musical performance. Learning Iannix was pretty straightforward, and I didn't have any major issues learning or working with the script editor. The biggest challenge in this project was configuring Csound to properly retrieve OSC data from Iannix. Since there is a lot of contious data being transmitted, it took a loop and array storage to properly handle, but having a working example now should help future enthusiasts. 
+The purpose of this project was to experiment with IanniX and explore the capabilities of using a graphical data system to control an audio engine, specifically Csound. I found the project very successful in producing an interesting visual and musical performance. Learning IanniX was straightforward, and I encountered no major issues with the script editor or overall workflow. The biggest challenge was configuring Csound to properly retrieve OSC data from IanniX. With continuous data streaming constantly, it required a loop and array storage to handle reliably; but now that a working example exists, it should help future enthusiasts get started more quickly.
 
-After the hurdles however, the project produced a really intersting performance system. I found using a loop to draw curves outline a 3D shape to be very interesting as both a visual effect, and as a source of musical data. The ability to program params into the parametric equations also created some unexpected consequences: being able to alter the parametric curves in real-time allow the Iannix program to go from being a static composition tool, to a live performance system, and I'm very intersted in extending this project for a more live based application.
+Despite the initial hurdles, the project resulted in a truly interesting performance system. Using a loop to draw curves that outline a 3D shape proved fascinating, both as a visual effect and as a rich source of musical data. Incorporating programmable `param_` variables into the parametric equations also led to unexpected and exciting consequences: real-time alteration of the curves transforms IanniX from a static composition tool into a dynamic live performance instrument. I’m very interested in extending this project toward more interactive, live-based applications.
 
-Csound proved to a be an effective audio application. Retrieving the OSC data was tricky, however now that there is a working example, it should be straightforward to connect any synthesis technique available in Csound with data transmitted from Iannix. This project uses very basic opcodes from Csound, focusing on the addition of many simple tones to create its effect. However there are many ways the audio process could be extended within Csound as Csound contains opcodes for virtually any synthesis process. 
+Csound proved to be an effective and powerful audio engine for this setup. Retrieving the OSC data was tricky at first, but with a working example in place, it becomes straightforward to connect any Csound synthesis technique to data transmitted from IanniX. This project relies on basic opcodes, focusing on layering many simple tones to create its overall effect. However, Csound offers opcodes for virtually any synthesis process, so there are countless ways the audio could be extended and enriched.
 
-The combination of Iannix and Csound provides unique and engaging system for both the performer and audience. If you have any interest in digital audio, data sonification, and/or 3D visuals, I'd highly recommend these systems out for yourself.
-
-
-# Gallery
+The combination of IanniX and Csound creates a unique and engaging system for both performer and audience. If you have any interest in digital audio, data sonification, and/or 3D visuals, I highly recommend trying these tools out for yourself.
 
 
 

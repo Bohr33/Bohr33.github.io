@@ -29,12 +29,45 @@ body {
 
 
 //Main page body sizing
-.archive {
-  padding-inline-end: 5rem;
-}
+// .archive {
+//   padding-inline-end: 5rem;
+// }
 
 .archive__subtitle{
   font-size: larger;
+}
+
+//Project Pages Section
+
+
+
+.project-header{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  border-bottom: .5px solid white;
+}
+
+.project-header h1{
+
+  font-size:55px;
+  text-align: center;
+}
+
+//Project Links
+
+.project-links{
+  display: flex;
+  gap: 1rem;
+  justify-content:space-evenly;
+  align-items: center;
+  text-align: center;
+
+  font-family: inherit;
+
+  font-size: larger;
+  
+
 }
 
 
