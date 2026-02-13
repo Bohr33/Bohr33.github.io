@@ -12,9 +12,9 @@ var store = [{
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Iannix + Csound: A Parametric Music System",
-        "excerpt":"Iannix Iannix + Csound: A Parametric Music System Project Overview This project explores the integration of IanniX’s visual graphing capabilities with Csound’s synthesis engine. The final result is a parametric music system which utilizes the contour lines of a 3D shape, programmed within the IanniX system, to inform oscillator parameters...","categories": [],
+        "excerpt":"Iannix + Csound: A Parametric Music System Project Overview This project explores the integration of IanniX’s visual graphing capabilities with Csound’s synthesis engine. The final result is a parametric music system which utilizes the contour lines of a 3D shape, programmed within the IanniX system, to inform oscillator parameters within...","categories": [],
         "tags": [],
-        "url": "/projects/project-one/",
+        "url": "/projects/iannix-mobius/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Project 2",

@@ -4,7 +4,7 @@ classes: wide
 title: "Iannix + Csound: A Parametric Music System"
 author_profile: false
 ---
-# Iannix Iannix + Csound: A Parametric Music System
+# Iannix + Csound: A Parametric Music System
 ![Engaging Photo of Project](/assets/images/iannix/IanniX_Capture_Mobius_Alt1.png)
 ### Project Overview
 
@@ -105,8 +105,6 @@ After setting the equations for each of the curves, the last important step is t
 
 **Setting Message Outputs**  
 The final important command to note in this script is the `run("setmessage current 20, ...")` command. This command is useful for setting the types of message outputs you want to send over the OSC control. These controls can also be edited by selecting individual cursors within the main application interface. For this message, we specify the message type we want to send, pass the cursor ID, and then list the cursor data to transmit.
-```
-
 
 ```
 function mobius2()
@@ -171,58 +169,54 @@ function mobius2()
 
 ```
 
-By rending the script above, you should obtain a result similar to this.
+By running the script above, you should obtain a result similar to this.
 
 ![Mobius Script Render](/assets/images/iannix/Basic_Mobius_No_triggers.png)
 
-This render was done with `Num_Curves = 50`; each of the 2D planes resting on the curve is a cursor. From here, we can perform the compostition by using the playback transport on the bottom of the screen. Using this, we can speed up and slow down the performance playback, controlling the at which all cursors move through their parametric curves. With a working system for creating meaningful data, we can now start exporting the data and using it to create interesting performances.
+This render was done with `Num_Curves = 50`; each plane marker represents a cursor. From here, we can play the composition by using the playback transport on the bottom of the screen. Using this, we can speed up and slow down the performance playback, controlling the rate at which all cursors move through their parametric curves. With a working system for generating meaningful data, we can now export it to create interesting performances.
 
-
-# Communicating with an Outisde Application
-Iannix has a few available protocols for exporting data outside of the program including serial, MIDI, and UDP. This projecet uses OSC, as it is the most straightforward for communication between applications. To enable OSC communication in Iannix, you need to got to the `CONFIG` tab on the inspector panel, and select `ENABLE OSC`. From here, you need to select a network ID for your other application to connect to and enter the ID for that applications OSC network connect protocol. For this project, I used Csound as the audio engine, however this can be replcaed with any audio generation program that can receive OSC messages.
+# Communicating with an Outside Application
+IanniX has a few available protocols for exporting data outside of the program including serial, MIDI, and UDP. This project uses OSC, as it is the most straightforward for communication between applications. To enable OSC communication in IanniX, go to the `CONFIG` tab in the inspector panel and select `ENABLE OSC`. Then specify the network ID and enter the receiving application's OSC address. For this project, I used Csound as the audio engine, however this can be replaced with any audio generation program that can receive OSC messages.
 
 ## Communicating with Csound
-OSC communication in csound is done by using the `OSClisten` opcode, in conjunction with `OSCinit`. The init function is called along with the OSC network ID to create a variable handle to the network, this handle is then passed to any `OSClisten` opcode (or other OSC protol opcode) to identify the OSC port. 
-
-
+OSC communication in Csound is done by using the `OSClisten` opcode, in conjunction with the `OSCinit` opcode. The init function is called along with the OSC network ID to create a variable handle to the network, this handle is then passed to any `OSClisten` opcode (or other OSC protocol opcodes) to identify the OSC port.
 
 ## mobius.csd
-This will be an attempt to breakdown what is happening in the .csd file without getting into too much Csound specifics. There are 3 instruments being used here: 2 of them are for retrieving data from the network (1 for the trigger data, 1 for the cursors), and the third one generates the actual audio. 
+This section breaks down what's happening in the .csd file without getting into too much Csound specifics. There are 3 instruments being used here: 2 of them are for retrieving data from the network (1 for the trigger data, 1 for the cursors), and the third one generates the actual audio.
 
-**Global Variables**\\
-At the top of the file, there is a range of global variables being initialized. Their descriptions describe their purpose, however the most importants to make note of are the `\\Cursor Values`` arrrays. These arrays are initialized with space for each of the curves generated and will each hold a unique incoming data type (x-positoin, y-position, etc).
-
+**Global Variables**  
+At the top of the file, there is a range of global variables being initialized. Their descriptions describe their purpose, however the most important are the `Cursor Values` arrays. These arrays are initialized with space for each of the curves generated and will each hold a unique incoming data type (x-position, y-position, etc).
 
 ### instr 1
-`instr 1` is responsible for retrieving the trigger data from the OSC network. Since the trigger data behaves much differently than the continous cursor data, a seperate instrument helps with clarity.
+`instr 1` is responsible for retrieving the trigger data from the OSC network. Since the trigger data behaves much differently than the continuous cursor data, a separate instrument helps with clarity.
 
-**OSCListen** \\
- The trigger data is retrived by using the opcode `OSClisten`. along with passing the global `giPortHandle` variable initialized at the beginning, we also. need to pass the speific message address, along with the expected message format. Iannix automatically provides 4 message address types, and in this case we simply use the provided `/trigger`. We then provide the expect data format: in Iannix, trigger data can be configured to send lots of different data about the trigger, however in this case we are simply sending the trigger ID, along with the trigger value (127 when on, 0 when off), thus we provide the format `ff`. Finally, we provide the variables which the retrieved values will be stored in: `ktid`, and `ktval`. 
+**OSCListen**  
+The trigger data is retrieved by using the opcode `OSClisten`. We pass both the global `giPortHandle` variable (initialized earlier) and the specific message address, along with the expected message format. IanniX automatically provides 4 message address types, and in this case we simply use the provided `/trigger`. We then provide the expected data format: in IanniX, trigger data can be configured to send lots of different data about the trigger, however in this case we are simply sending the trigger ID, along with the trigger value (127 when on, 0 when off), thus we provide the format `ff`. Finally, we provide the variables which the retrieved values will be stored in: `ktid`, and `ktval`.
 
- The rest of `instr 1` is dedicated to triggering a musical effect whenver the trigger occurs. Although the `OSClisten` opcode returns a trigger value to a k variable (in this case `kGotTrig`), however I found it was more stable using the `changed` opcode to trigger from the actual retrieved OSC value. When the trigger is triggered, the varaible `ktval` triggers the if statement below, performing the musical logic. For sake of brevity, I won't get into the details of this logic, but the overall intended effect is to trigger a random transposition of each oscillator every 2.1 cycles around the mobius strip. 
+The rest of `instr 1` is dedicated to triggering a musical effect whenever the trigger fires. Although the `OSClisten` opcode returns a trigger value (here, `kGotTrig`), I found it more stable to use the `changed` opcode to trigger from the actual retrieved OSC value. When triggered, the variable `ktval` activates the conditional below, executing the musical logic. For the sake of brevity, I won't get into the details of this logic, but the overall intended effect is to trigger a random transposition of each oscillator every 2.1 cycles around the Möbius strip.
 
- ### instr 2
 
- `instr 2` is similar to `instr 1` in that it's purpose is to handle incoming data, however it requires a bit more precise programming to handle all of the incoming messages. Instead of collecting a single varaible from a single trigger, we now have to collect 5 different data parameters from possibly 50+ contious data curves. To solve this, we employ unique arrays for each variable, large enough to hold a parameter for each curve; we store data in order of the cursor ID's for ease of data management; and we use a loop for both retrieving messages, and storing them in thei respetive arrays.
+### instr 2
 
- The first loop is done with Csound loop protocol `kgoto`. The OSClisten opcode is being called once every k-rate (default is every 48000/64 samples); everytime this happens, we need to retrieve all the updated messages from the OSC network. Because a lot of cursors will update during this time, we need to loop through all of the cursors to make sure we update all the data properly. This loop does that by using the `kGotIi` variable to check for new messages (it will be 1 whenever there is a new message), and if so, takes the data collected in the variables provided to the `OSClisten` opcode, and stores them in their respetive arrays. This repeats until there are no more new messages, in which case it exits.
+`instr 2` serves a similar purpose to `instr 1` in handling incoming data, however it requires a bit more precise programming to handle all of the incoming messages. Rather than collecting a single variable from one trigger, we now collect 5 data parameters from potentially 50+ continuous data curves. To solve this, we employ unique arrays for each variable, large enough to hold a parameter for each curve; we store data by cursor ID for easier data management; and we use a loop to retrieve messages and store them in their respective arrays.
 
- Finally, the retieved data is processed into a more meanigful format which will processed in `instr 3`.
+The first loop uses Csound's `kgoto` loop protocol. The OSClisten opcode is called once per k-rate cycle (default: every 48000/64 samples); each time this occurs, we loop through all cursors to ensure all data is updated properly. This loop does that by using the `kGotIi` variable to check for new messages (it will be 1 whenever there is a new message), and if so, takes the data collected in the variables provided to the `OSClisten` opcode, and stores them in their respective arrays. This repeats until there are no more new messages, in which case it exits.
 
- ### instr 3
+Finally, the retrieved data is processed into a more meaningful format for use in `instr 3`.
 
- Finally, `instr 3` takes the data collected and parsed in `instr 1` and `instr 2`, and creates the audio landscape. The goal for this effect was to create simple sine wave oscillators for each individual curve, then use the x, y, and z positions of the cursors as frequency, amplitude, and some variable parameter. The main audio generator is the `oscili` opcode, which receives the amplitude data, processed frequency data, and a custom waveshape to produce a tone, 
- 
- **Running an Instrument Loop** \\
- In order to create a unique oscillator for each curve, a loop was employed. However, creating a loop of unique audio rate instruments proved to be tricky in Csound,. The solution I found came from using a recursive loop via a `schedule` opcode. We can find this loop at the very bottom of `instr 3`.
- 
- ```
- if(p4 + 1 < giNumBands) then
+### instr 3
+
+Finally, `instr 3` takes the data collected from `instr 1` and `instr 2` and generates the audio. This instrument creates a simple sine wave oscillator for each curve, mapping cursor x, y, and z positions to frequency, amplitude, and filter parameters. The main audio generator is the `oscili` opcode, which receives the amplitude data, processed frequency data, and a custom waveshape to produce a tone.
+
+**Running an Instrument Loop**  
+In order to create a unique oscillator for each curve, a loop was employed. However, creating a loop of unique audio-rate instruments proved tricky in Csound. The solution uses a recursive loop via the `schedule` opcode. We can find this loop at the very bottom of `instr 3`.
+```
+if(p4 + 1 < giNumBands) then
 	schedule(3, 0, p3, p4+1)
 endif
 ```
 
- By using this opcode to call itself, it will continually instantiate new instances of `instr 3`. Using 'p' variables, we send the new ID value to each new instrument instance, allowing it to close the loop once enough instruments have been run; this variable is also used to retrieve the appropriate cells from the arrays of positional data generated by Iannix. 
+By calling itself, this opcode continuously instantiates new instances of `instr 3`. Using p-variables, we pass the ID value to each new instrument instance, closing the loop once sufficient instruments have spawned; this variable also indexes into the positional data arrays generated by IanniX.
  
  **Audio Process** \\
  The actual audio processing happing in `instr 3` is relatively simple. First, the `oscili` opcode generates a sine wave using the processed amplitude and frequency data (The frequency data includes an extra processing step to detune certain frequencies based on the y-variable). The audo is then scaled down based on the number of total oscillators and a basic low-pass filter is applied, using more positional data to feed the frequency and resonance. Finally, the oscillators are panned across the stereo field evenly using the cursor ID. That is the entire audio generation process, however some more data processing was done to ensure oscillator frequencies were consonant. Mapping the cursor x-position to raw frequencies leads to a very dissonant jumble of noise; to make the piece more musical, position data intended for frequencies were first mapped onto a custom musical scale in the array: `giNotes[]`, which outlines an extended chord structure with alternating major and minor thirds, with an extra major second on top.
