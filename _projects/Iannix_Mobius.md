@@ -3,13 +3,15 @@ layout: splash
 classes: wide
 title: "Iannix + Csound: A Parametric Music System"
 author_profile: false
+thumb: "/assets/images/iannix/IanniX_Capture_Mobius2.png"
+excerpt: "This project explores the integration of the IanniX graphing capabilities with Csound's synthesis engine. The post outlines the process in implementing the project and serves as both an overview of the project details, and a tutorial for those interested."
 ---
 
 <div class="project-header">
 	<h1>Iannix + Csound: A Parametric Music System</h1>
 </div>
 
-![Engaging Photo of Project](/assets/images/iannix/IanniX_Capture_Mobius_Alt1.png)
+![Engaging Photo of Project](/assets/images/iannix/IanniX_Capture_Mobius2.png)
 
 <div class="project-links">
 	<a href="https://github.com/Bohr33/IanniX-Csound-Mobius">
@@ -24,34 +26,26 @@ author_profile: false
 
 
 ### Project Overview
-
 This project explores the integration of IanniX's visual graphing capabilities with Csound's synthesis engine. The final result is a parametric music system which utilizes the contour lines of a 3D shape, programmed within the IanniX system, to inform oscillator parameters within a constrained musical system in Csound. The control capabilities within IanniX allow for the resulting composition to not only be a static, generative piece, but also an interactive system that encourages the user to distort the original parameters to explore the sonic relationships defined within the space.
 
 When both systems are running, IanniX serves as an interactive visualization for the musical environment within Csound. As the piece develops, the user will see individual cursors moving along the contour lines defined in IanniX which each have mapped the x, y, and z parameters to distinct variables within the audio synthesis process.
 
 
-### Motivation
-I've always been drawn to work that fuses multiple disciplines. Certain historical figures have excelled at this, and their unique expertise across seemingly incompatible subjects often expresses itself in unique and interesting ways. One of the most influentital figures of my own practice is Iannis Xenakis, an engineer, architect, and composer. His compositions are known for their graphic scores, which inform performers through visual interpretation rather than conventional notation. Many of his works were informed by mathmatical functions and stochastic processes, an approach that fascinated me as a compositional technique. Today, his legacy lives on in IanniX, a visual scoring system developed by Jean-Baptiste Thiebaut and collaborators which expounds on his ideas by allowing the user to create dynamic 3D scores that evolve and generate compositional data over time.
-
-Learning of this program immediately piqued my interest, and I knew I wanted to do a project with it. The opportunity came during graduate school, when we were assigned to present on integrating third-party applications with Csound. I spent time learning the software and developed this project, the Möbius strip, as a demonstration piece for the presentation. It turned out compelling enough to warrant a full write-up.
-
-
-## Graphing in Iannix
-In starting this project, I wasn't sure exactly what the end goal would be. I wanted to utilize the 3D capabilities of IanniX, so I thought generating an interesting 3D shape would be a good way to get to know the program. I eventually decided on a Möbius strip as it would be a good challenge and I thought it would yield interesting visual and musical results.
-
-### Overview of IanniX
+# Graphing in Iannix
 IanniX scores generate data by making use of three primary graphing tools: **lines**, **cursors**, and **events**. The lines are simply lines defined somewhere in the 3D space and control where the cursors move along. The cursors represent the elements of the score that change continuously throughout time, and can be placed along lines to move across throughout the composition. The events can also be placed anywhere in 3D space, and are used to send binary trigger data, being triggered by cursors colliding with their definable boundary.
 
-# Generating a Möbius Strip
-Since a Möbius Strip exists as a 2D plane within 3D space, modeling it in IanniX isn't completely straightforward since IanniX is really only built for 1-dimensional lines/curves. My solution was to generate contour lines that would resemble a Möbius Strip when placed contiguously. This was a straightforward task since IanniX easily allows curves to be defined via parametric equations, and since a Möbius Strip is most aptly defined via parametric equations, this suited my situation perfectly.
+
+
+## Generating a Möbius Strip
+For this project, the goal was to model an interesting shape that would both look interesting, and yield interesting data output for audio. I decided on a Möbius strip, which is notable for being a one-sided 3D object. Since a Möbius Strip exists as a 2D plane within 3D space, modeling it in IanniX isn't completely straightforward since IanniX is really only built for 1-dimensional lines/curves. My solution was to generate contour lines that would resemble a Möbius Strip when placed contiguously. This was a straightforward task since IanniX easily allows curves to be defined via parametric equations, and since a Möbius Strip is most aptly defined via parametric equations, this suited my situation perfectly.
 
 ### Parametric Equations in IanniX
-The term **Parametric** can seem kind of daunting to an uninitiated listener; however, in the context of this program it becomes pretty straightforward. A parametric equation is one whose spatial coordinates (x, y, and z in our case) are defined by an outside variable, i.e., the coordinates aren't inherently related via an x = y relationship. In IanniX, we are granted the ability to define a curve with independent functions for each coordinate, i.e., parametrically. We can use this to come up with interesting curves by simply combining simple or complex equations for each coordinate, independently. Furthermore, these equations can be written with **params**, which automatically create variable sliders which can be used to transform the resulting shape through the variable's defined influence on the function throughout the performance.
+The term **Parametric** can seem kind of daunting to an uninitiated listener; however, in the context of this program it becomes pretty straightforward. A parametric equation is one whose spatial coordinates (x, y, and z in our case) are defined by an outside variable instead of the explitict $y = x$ relationship. In IanniX, we are granted the ability to define curves parametrically, allowing us to write independant equations for each dimension. We can use this to come up with interesting shapes by simply combining simple or complex equations for each coordinate. Furthermore, these equations can be written with **params**, which automatically create variable sliders which can be used to transform the resulting shape through the variable's defined influence on the function throughout the performance.
 
 If you are interested in trying this out for yourself, I'd recommend adding a *math curve* within the default curves in IanniX; this creates a sine wave shape across the x and y-axis. By selecting the curve and going to the info → 3D Space tab, you can see the equation that defines the curve in an editable box, along with **params** which are written into the equation. By playing around with this and editing it with some different equations, you can get a solid grasp of what parametric equations are, and how to utilize them within IanniX.
 
 ### Mobius Strip Equation
-The Mobius Strip can be defined by the parametric equations...
+In order to implement curves for the Möbius strip, we will need to know the parametric equations that define it. These are listed below.
 
 $$
 \begin{aligned}
@@ -63,13 +57,15 @@ $$
 
 Each equation defines one of the dimensional coordinates for the Möbius strip, $x, y, z$. Since this is parametric, this is ideal for IanniX which expects a parametric equation. However, in order to draw this in IanniX, we need to breakdown this equation a bit further so we can isolate which variables we will need to parameterize in the equations.
 
+### Writing a Curve Function
+
 We can try loading this equation straight into a curve within IanniX if we replace each variable $R, u, v$ with IanniX's slider parameter keyword **param**. Here, **param1** will become the variable $R$, **param2** becomes $v$, and **param3** becomes $u$. Each variable has been scaled by $4\pi$ to create a complete effect.
 
-( param1 * 3.14 * 4 + param2 * 3.14 * 4 * cos(param3 * 3.14 * 4 * t / 2) ) * cos(param3 * 3.14 * 4 * t)
-,
-( param1 * 3.14 * 4 + param2 * 3.14 * 4 * cos(param3 * 3.14 * 4 * t / 2) ) * sin(param3 * 3.14 * 4 * t)
-,
-param3 * 3.14 * 4 * sin(param1 * 3.14 * 4 * t / 2)
+```
+( param1 * 3.14 * 4 + param2 * 3.14 * 4 * cos(param3 * 3.14 * 4 * t / 2) ) * cos(param3 * 3.14 * 4 * t),
+( param1 * 3.14 * 4 + param2 * 3.14 * 4 * cos(param3 * 3.14 * 4 * t / 2) ) * sin(param3 * 3.14 * 4 * t),
+( param3 * 3.14 * 4 * sin(param1 * 3.14 * 4 * t / 2)
+```
 
 By adjusting the parameter values, we can generate a curve like the one shown below. **Param1** controls the radius of the Möbius strip, while **param2** and **param3** represent the parametric variables that evolve over time to define its shape. Sliding these parameters reveals how the Möbius strip-like form emerges from the curve boundaries. This insight provides our approach: by generating multiple curves with the same parametric equations but incrementally varied parameter values, we can create a series of contour lines that collectively outline a Möbius strip in 3 dimensions. However, manually creating and adjusting at least 20 individual curves would be tedious. Fortunately, IanniX's script editor offers an efficient solution.
  ![Single Mobius Strip Curve](/assets/images/iannix/Mobius_Line.png)
@@ -254,7 +250,7 @@ i2 0 1000
 i3 0 1000 0
 ```
 
-## Running the System**  
+## Running the System  
 Once both files are properly set up, to run the complete performance with both applications, we simply need to press play in both the IanniX transport system and Csound. If OSC communication is properly set up, then we should be able to hear our array of oscillators panned across the stereo field, shifting notes in seemingly random ways.
 
 **Debugging Communication Issues**  

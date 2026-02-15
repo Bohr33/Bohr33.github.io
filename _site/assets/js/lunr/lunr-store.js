@@ -17,12 +17,6 @@ var store = [{
         "url": "/projects/iannix-mobius/",
         "teaser": "/assets/images/output.jpg"
       },{
-        "title": "Project 2",
-        "excerpt":"Hello!  ","categories": [],
-        "tags": [],
-        "url": "/projects/project-two/",
-        "teaser": "/assets/images/output.jpg"
-      },{
         "title": "Dynamic Convolver",
         "excerpt":"Dynamic Convolver About The Dynamic Convolver was my final thesis project for my undergraduate course at Berklee. I was inspired to make this after learning about convolution, and how easy it was to implement within Csound. Convolution is a complex algorithm that takes to arrays and operates on them in...","categories": [],
         "tags": [],
