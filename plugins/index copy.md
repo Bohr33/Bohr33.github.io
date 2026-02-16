@@ -19,25 +19,22 @@ permalink: /plugins/
   {%- if items and items.size > 0 -%}
     {%- assign items = items | sort: "weight" -%}
     <div class="plugin-grid">
-        {%- for item in items -%}
-      <div class="plugin-card">
-        <div class="meta">
-          <h2>{{ item.title }}</h2>
-          {%- if item.subtitle -%}<p class="subtitle">{{ item.subtitle }}</p>{%- endif -%}
-          {%- if item.tags -%}
-            <ul class="tags">
-              {%- for t in item.tags -%}<li>{{ t }}</li>{%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-          <a class="plugin-card-body" href="{{ item.url | relative_url }}">
-            <div class="thumb">
-              <img src="{{ item.thumb | default: item.image | relative_url }}" alt="{{ item.title }}">
-            </div>
-            <p>{{item.excerpt}}</p>
-          </a>
-      </div>
-        {%- endfor -%}
+      {%- for item in items -%}
+        <a class="plugin-card" href="{{ item.url | relative_url }}">
+          <div class="thumb">
+            <img src="{{ item.thumb | default: item.image | relative_url }}" alt="{{ item.title }}">
+          </div>
+          <div class="meta">
+            <h2>{{ item.title }}</h2>
+            {%- if item.subtitle -%}<p class="subtitle">{{ item.subtitle }}</p>{%- endif -%}
+            {%- if item.tags -%}
+              <ul class="tags">
+                {%- for t in item.tags -%}<li>{{ t }}</li>{%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        </a>
+      {%- endfor -%}
     </div>
   {%- else -%}
     <p>No items yet. Add a file to <code>/_vsts/</code> with front matter to see it here.</p>

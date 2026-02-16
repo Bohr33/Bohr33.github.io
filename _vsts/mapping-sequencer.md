@@ -4,6 +4,7 @@ classes: wide
 title: "Mapping Sequencer"
 author_profile: false
 thumb: /assets/plugins/mapping-sequencer.png
+excerpt: "A Max for Live sequencer that allows mapping of the sequencer output to any automatable parameter within Ableton Live. Features common sequencer controls, such as presets, pattern scaling, and sequence length"
 ---
 <div class="plugin-content-page">
     <h1>Mapping Sequencer</h1>

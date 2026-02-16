@@ -198,52 +198,72 @@
 
     <section class="page__content" itemprop="text">
       <div>
-  <h1>Plugins</h1>
   <p>As an audio programmer who is interested in the creative applications of DSP, one of my favorite ways of experimenting with and learning about new DSP effects is by creating a plugin with the effect. This not only gives me experience working with the DSP on a hands on level, but also creates a meaningful and useful tool once done. Because I've made of many of these devices for school and other projects, I've decided to host them all here to both showcase my work, and allow others to download and expirement with them as well</p>
   
-  <p>All of the plugin pages contain links to my github where the source code can be downloaded. Some of these plugins were made with tools like Csound, Max/MSP, and RNBO, while others are in C++ with JUCE or other libraries. Each page will highlight the language used, as well as outline any intersting methods if relevant</p><div class="plugin-grid"><a class="plugin-card" href="/plugins/dynamicconvolver/">
-          <div class="thumb">
-            <img src="/assets/plugins/dynamic-convolver.png" alt="Dynamic Convolver" />
-          </div>
-          <div class="meta">
-            <h2>Dynamic Convolver</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/dynamicconvolver-juce/">
-          <div class="thumb">
-            <img src="/assets/plugins/dConv(JUCE).png" alt="Dynamic Convolver (JUCE)" />
-          </div>
-          <div class="meta">
-            <h2>Dynamic Convolver (JUCE)</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/mapping-sequencer/">
-          <div class="thumb">
-            <img src="/assets/plugins/mapping-sequencer.png" alt="Mapping Sequencer" />
-          </div>
-          <div class="meta">
-            <h2>Mapping Sequencer</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/pulse/">
-          <div class="thumb">
-            <img src="/assets/plugins/pulse.png" alt="Pulse" />
-          </div>
-          <div class="meta">
-            <h2>Pulse</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/sample-sequencer/">
-          <div class="thumb">
-            <img src="/assets/plugins/sample-sequencer.png" alt="Sample Sequencer" />
-          </div>
-          <div class="meta">
-            <h2>Sample Sequencer</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/schroder/">
-          <div class="thumb">
-            <img src="/assets/plugins/schroeder.png" alt="Schroeder Verb" />
-          </div>
-          <div class="meta">
-            <h2>Schroeder Verb</h2><ul class="tags"></ul></div>
-        </a><a class="plugin-card" href="/plugins/spectralprocessor/">
-          <div class="thumb">
-            <img src="/assets/plugins/specGrain.png" alt="Spectral Processor" />
-          </div>
-          <div class="meta">
-            <h2>Spectral Processor</h2><ul class="tags"></ul></div>
-        </a></div></div>
+  <p>All of the plugin pages contain links to my github where the source code can be downloaded. Some of these plugins were made with tools like Csound, Max/MSP, and RNBO, while others are in C++ with JUCE or other libraries. Each page will highlight the language used, as well as outline any intersting methods if relevant</p><div class="plugin-grid"><div class="plugin-card">
+        <div class="meta">
+          <h2>Dynamic Convolver</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/dynamicconvolver/">
+            <div class="thumb">
+              <img src="/assets/plugins/dynamic-convolver.png" alt="Dynamic Convolver" />
+            </div>
+            <p>A convolution reverb plugin that allows dynamic selection of the convolution region of a user uploaded impulse response file. Also features an array of additional pre- and post-proceessing</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Dynamic Convolver (JUCE)</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/dynamicconvolver-juce/">
+            <div class="thumb">
+              <img src="/assets/plugins/dConv(JUCE).png" alt="Dynamic Convolver (JUCE)" />
+            </div>
+            <p>A Dynamic Convolution plugin, inspiried by an earlier convolution plugin made with Csound, updated with the JUCE framework.</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Mapping Sequencer</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/mapping-sequencer/">
+            <div class="thumb">
+              <img src="/assets/plugins/mapping-sequencer.png" alt="Mapping Sequencer" />
+            </div>
+            <p>A Max for Live sequencer that allows mapping of the sequencer output to any automatable parameter within Ableton Live. Features common sequencer controls, such as presets, pattern scaling, and sequence length</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Pulse</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/pulse/">
+            <div class="thumb">
+              <img src="/assets/plugins/pulse.png" alt="Pulse" />
+            </div>
+            <p>A Drum Sound design synthesizer made with Csound. Features FM, noise, and basic oscillator for generators and a range of modulation options for shaping the transient and overall tone.</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Sample Sequencer</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/sample-sequencer/">
+            <div class="thumb">
+              <img src="/assets/plugins/sample-sequencer.png" alt="Sample Sequencer" />
+            </div>
+            <p>A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Schroeder Verb</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/schroder/">
+            <div class="thumb">
+              <img src="/assets/plugins/schroeder.png" alt="Schroeder Verb" />
+            </div>
+            <p>A simple and cheap reverb that copies the earlier reverb designs from Manfred Schroeder in the 1960s. Made using Csound and delay opcodes to mimic the original design.</p>
+          </a>
+      </div><div class="plugin-card">
+        <div class="meta">
+          <h2>Spectral Processor</h2><ul class="tags"></ul></div>
+          <a class="plugin-card-body" href="/plugins/spectralprocessor/">
+            <div class="thumb">
+              <img src="/assets/plugins/specGrain.png" alt="Spectral Processor" />
+            </div>
+            <p>An experimental spectral processing plugin that features some basic, and experimental, effects that utilize the spectral capabilities of the Phase Vocoder. Features pitch shifting, blur, stretch, and spectral delay with additional parameters.</p>
+          </a>
+      </div></div></div>
 
     </section>
   </article>

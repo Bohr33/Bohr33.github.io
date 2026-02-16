@@ -4,6 +4,7 @@ classes: wide
 title: "Schroeder Verb"
 author_profile: false
 thumb: /assets/plugins/schroeder.png
+excerpt: "A simple and cheap reverb that copies the earlier reverb designs from Manfred Schroeder in the 1960s. Made using Csound and delay opcodes to mimic the original design."
 ---
 <div class="plugin-content-page">
     <h1>Schroeder-Verb</h1>

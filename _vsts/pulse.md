@@ -4,6 +4,7 @@ classes: wide
 title: "Pulse"
 author_profile: false
 thumb: /assets/plugins/pulse.png
+excerpt: "A Drum Sound design synthesizer made with Csound. Features FM, noise, and basic oscillator for generators and a range of modulation options for shaping the transient and overall tone."
 ---
 <div class="plugin-content-page">
     <h1>Pulse</h1>
