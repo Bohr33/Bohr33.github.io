@@ -12,9 +12,29 @@ excerpt: "A Max for Live sequencer that allows mapping of the sequencer output t
         <img src="{{ "/assets/plugins/mapping-sequencer.png" | relative_url }}"
          alt="Image of Mapping Sequencer">
     </div>
-    <h2 class="plugin-content-page">About</h2>
-    <p>The Mapping Sequencer is a simple Max4Live device that allows a global sequencer to control up to 16? different mappable parameters within Live.</p>
-    <p>t was inspired by the other mappable Max4Live devices built into Ableton Live. Having found those very useful, I wanted to build a similar mapping device, but have it controlled by a sequencer. Thus, I created the Mapping Sequencer.</p>
-    <p>It features a 16 step GUI for drawing individual values for each step. Using the drop down menu, you can map the sequence to various parameters. Individual scaling of each mapping allows for inverting and other variations between mappings</p>
+    <p>The Mapping Sequencer is a  Max4Live device that allows a global sequencer to control up to 16 different mappable parameters within Ableton Live. It was inspired by the similar Max4Live devices that allow for mapping various Live Parameter to device conrols. Having found those very useful, I wanted to build a similar mapping device but use a sequencer to control the parameter data. Thus, I created the Mapping Sequencer.</p>
+    <p>It features a 16 step GUI for programming individual values on each step. Using the drop down menu, you can map the sequence to various parameters and scale the total effect for each individual parameter. As well as this, there are global controls for changing the sequence, including <b>Number of Steps</b>, <b>Offset</b>, and <b>Swing</b>.</p>
+
+    
     
 </div>
+
+
+## Download and Links
+
+<div class="link-container">
+  <div class="plugin-links">
+      <a href="https://github.com/Bohr33/MaxMSP-Devices" class="btn btn-primary" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+      </a>
+  </div>
+</div>
+
+
+
+<h2>Technical Details</h2>
+- **Format**: Max4Live
+- **Built With**: Max 8/Max4Live
+- **OS**: macOS
+
+Note: This plugin is not actively maintained. It is provided as-is for demonstration purposes. If you encounter issues, feel free to reach out but support may be limited.

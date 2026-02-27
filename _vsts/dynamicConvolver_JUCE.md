@@ -14,17 +14,32 @@ excerpt: "A Dynamic Convolution plugin, inspiried by an earlier convolution plug
         <img src="{{ "/assets/plugins/dConv(JUCE).png" | relative_url }}"
          alt="Image of Dynamic Convolver Plugin">
     </div>
-    <h2 class="plugin-content-page">About</h2>
     <p>This project began as an exercise in C++ programming with JUCE, inspired by a convolution plugin I originally developed during my undergraduate studies using Csound and Cabbage, titled the <em>Dynamic Convolver</em>. That earlier version implemented standard convolution processing but allowed the user to isolate a specific region of an impulse response or audio file and manipulate the processing position in real time. This new version represents my attempt to recreate and expand that concept entirely in C++ within the JUCE framework.</p>
-
-
-<h3>Development</h3>
-<p>One of the most significant challenges in developing this plugin was implementing the convolution engine from scratch. While JUCE provides a built-in convolution module, it does not expose enough of its internal processing to support the level of customization I needed. As a result, I wrote my own convolution class to gain full control over the DSP flow and enable more experimental features.</p>
+    <p>One of the most significant challenges in developing this plugin was implementing the convolution engine. While JUCE provides a built-in convolution module, it does not expose enough of its internal processing to support the level of customization I needed. As a result, I wrote my own convolution class to gain full control over the DSP flow and enable more experimental features.</p>
 
 <h3>Features</h3>
 <p>In its current state, this version of the Dynamic Convolver functions like a standard convolution processor: users can load an impulse response (or any audio file) and adjust the Dry/Wet control to blend the processed signal. The novel functionality comes from the file-positioning controls and visual display. Once a file is loaded, it appears on the GUI, and the <strong>File Position</strong> and <strong>File Length</strong> parameters define a highlighted region—representing the portion of the file used for convolution. This allows users to “focus” the convolution on any segment of the impulse response.</p>
 
 <p>At present, adjusting the File Position parameter during real-time playback may produce choppy results due to the abrupt shift in the convolution window. Future updates aim to smooth this behavior, likely through interpolation or buffered transitions, improving performance for dynamic, real-time manipulation.</p>
 
-    
 </div>
+
+
+## Download and Links
+
+<div class="link-container">
+  <div class="plugin-links">
+      <a href="https://github.com/Bohr33/Dynamic_Convolution_Plugin" class="btn btn-primary" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+      </a>
+  </div>
+
+</div>
+
+
+<h2>Technical Details</h2>
+- **Format**: VST, AU
+- **Built With**: JUCE, C++
+- **OS**: macOS
+
+Note: This plugin is not actively maintained. It is provided as-is for demonstration purposes. If you encounter issues, feel free to reach out but support may be limited.

@@ -18,25 +18,25 @@ var store = [{
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Dynamic Convolver",
-        "excerpt":"Dynamic Convolver About The Dynamic Convolver was my final thesis project for my undergraduate course at Berklee. I was inspired to make this after learning about convolution, and how easy it was to implement within Csound. Convolution is a complex algorithm that takes to arrays and operates on them in...","categories": [],
+        "excerpt":"Dynamic Convolver The Dynamic Convolver is a convolution plugin that implements the standard convolution algorithm with the additional ability to edit the convolution file in real-time for experimental sound design. The goal for this plugin was to make it easy to experiment with different Impulse Response files during real-time convolution...","categories": [],
         "tags": [],
         "url": "/plugins/dynamicconvolver/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Dynamic Convolver (JUCE)",
-        "excerpt":"Dynamic Convolver About This project began as an exercise in C++ programming with JUCE, inspired by a convolution plugin I originally developed during my undergraduate studies using Csound and Cabbage, titled the Dynamic Convolver. That earlier version implemented standard convolution processing but allowed the user to isolate a specific region...","categories": [],
+        "excerpt":"Dynamic Convolver This project began as an exercise in C++ programming with JUCE, inspired by a convolution plugin I originally developed during my undergraduate studies using Csound and Cabbage, titled the Dynamic Convolver. That earlier version implemented standard convolution processing but allowed the user to isolate a specific region of...","categories": [],
         "tags": [],
         "url": "/plugins/dynamicconvolver-juce/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Mapping Sequencer",
-        "excerpt":"Mapping Sequencer About The Mapping Sequencer is a simple Max4Live device that allows a global sequencer to control up to 16? different mappable parameters within Live. t was inspired by the other mappable Max4Live devices built into Ableton Live. Having found those very useful, I wanted to build a similar...","categories": [],
+        "excerpt":"Mapping Sequencer The Mapping Sequencer is a Max4Live device that allows a global sequencer to control up to 16 different mappable parameters within Ableton Live. It was inspired by the similar Max4Live devices that allow for mapping various Live Parameter to device conrols. Having found those very useful, I wanted...","categories": [],
         "tags": [],
         "url": "/plugins/mapping-sequencer/",
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Pulse",
-        "excerpt":"Pulse About I created this plugin one day after I was wanting a device that would allow me to craft my own drum samples, since I found it very time consuming to make my own through other softwares. This gave the idea for a plugin that was dedicated to making...","categories": [],
+        "excerpt":"Pulse The Pulse Drum Designer is a mono drum synthesis plugin built for fast, hands-on drum sound design. It combines multiple synthesis methods with an integrated transient shaper, giving you precise control over both the tonal and percussive character of your sounds. Designed as a dedicated drum synthesis tool, it...","categories": [],
         "tags": [],
         "url": "/plugins/pulse/",
         "teaser": "/assets/images/output.jpg"
