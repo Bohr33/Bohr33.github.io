@@ -24,17 +24,14 @@ permalink: /plugins/
         <div class="meta">
           <h2>{{ item.title }}</h2>
           {%- if item.subtitle -%}<p class="subtitle">{{ item.subtitle }}</p>{%- endif -%}
-          {%- if item.tags -%}
-            <ul class="tags">
-              {%- for t in item.tags -%}<li>{{ t }}</li>{%- endfor -%}
-            </ul>
-          {%- endif -%}
         </div>
           <a class="plugin-card-body" href="{{ item.url | relative_url }}">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="{{ item.thumb | default: item.image | relative_url }}" alt="{{ item.title }}">
             </div>
-            <p>{{item.excerpt}}</p>
+            <div class="thumb-text">
+              <p>{{item.excerpt}}</p>
+            </div>
           </a>
       </div>
         {%- endfor -%}

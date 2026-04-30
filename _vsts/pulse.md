@@ -4,17 +4,17 @@ classes: wide
 title: "Pulse"
 author_profile: false
 thumb: /assets/plugins/pulse.png
+thumbnail_size: "wide"
 excerpt: "A Drum Sound design synthesizer made with Csound. Features FM, noise, and basic oscillator for generators and a range of modulation options for shaping the transient and overall tone."
 ---
 <div class="plugin-content-page">
     <h1>Pulse</h1>
-    <div class="flex-container">
-        <img src="{{ "/assets/plugins/pulse.png" | relative_url }}"
-         alt="Image of Pulse Plugin">
-    </div>
-<p>The Pulse Drum Designer is a mono drum synthesis plugin built for fast, hands-on drum sound design. It combines multiple synthesis methods with an integrated transient shaper, giving you precise control over both the tonal and percussive character of your sounds.</p>
-<p>Designed as a dedicated drum synthesis tool, it streamlines the process of crafting custom drum samples from scratch — without the overhead of a general-purpose synthesizer.</p>
-
+    <div class="plugin-thumbnail--{{ page.thumbnail_size }}">
+      <img src="{{ "/assets/plugins/pulse.png" | relative_url }}"
+        alt="Image of Pulse Plugin">
+      <p>The Pulse Drum Designer is a mono drum synthesis plugin built for fast, hands-on drum sound design. It combines multiple synthesis methods with an integrated transient shaper, giving you precise control over both the tonal and percussive character of your sounds.</p>
+      <p>Designed as a dedicated drum synthesis tool, it streamlines the process of crafting custom drum samples from scratch — without the overhead of a general-purpose synthesizer.</p>
+  </div>
 </div>
 
 

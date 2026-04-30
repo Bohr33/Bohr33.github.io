@@ -4,6 +4,7 @@ classes: wide
 title: "Spectral Processor"
 author_profile: false
 thumb: /assets/plugins/specGrain.png
+thumbnail_size: wide;
 excerpt: "An experimental spectral processing plugin that features some basic, and experimental, effects that utilize the spectral capabilities of the Phase Vocoder. Features pitch shifting, blur, stretch, and spectral delay with additional parameters."
 ---
 
@@ -13,11 +14,6 @@ excerpt: "An experimental spectral processing plugin that features some basic, a
     <div class="flex-container">
         <img src="{{ "/assets/plugins/specGrain.png" | relative_url }}"
          alt="Image of Spectral Processor Plugin">
-    </div>
-    <div class="plugin-links">
-        <a href="https://github.com/Bohr33/SpecGrain_Plugin" class="btn btn-primary" target="_blank">
-            <i class="fab fa-github"></i> View on GitHub
-        </a>
     </div>
     <h2 class="plugin-content-page">About</h2>
     <p>The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book as a guide for the core design, I implemented several additional algorithms featured there—including spectral blur and spectral delay.</p>
@@ -64,4 +60,10 @@ excerpt: "An experimental spectral processing plugin that features some basic, a
         <source src="/assets/audio/SpecGrain/Synth_FreqDelay-MP3.mp3" type="audio/mpeg">
     </audio>
     </div>
+</div>
+
+<div class="plugin-links">
+    <a href="https://github.com/Bohr33/SpecGrain_Plugin" class="btn btn-primary" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+    </a>
 </div>

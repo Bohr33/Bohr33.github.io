@@ -4,20 +4,21 @@ classes: wide
 title: "Dynamic Convolver"
 author_profile: false
 thumb: /assets/plugins/dynamic-convolver.png
+thumbnail_size: "wide"
 excerpt: "A convolution reverb plugin that allows dynamic selection of the convolution region of a user uploaded impulse response file. Also features an array of additional pre- and post-proceessing."
 ---
 
 
-  
-
 <div class="plugin-content-page">
-<h1>Dynamic Convolver</h1>
-      <img src="{{ page.thumb }}"
-        alt="Image of Dynamic Convolver Plugin">
-  <div>  
-    <div class="title-text">
-      <p> The Dynamic Convolver is a convolution plugin that implements the standard convolution algorithm with the additional ability to edit the convolution file in real-time for experimental sound design. The goal for this plugin was to make it easy to experiment with different Impulse Response files during real-time convolution processing. This plugin makes this easy by providing an editable region of uploaded file that can be altered in real-time. </p>
-      <p>The main control window gives users control over the start position, region length, and playback speed (which also doubles as a tuning parameter). Additional processing controls in the pre and post sections allow for precise shaping of the input and output signal, opening up a wide range of sonic experimentation.</p>
+  <h1>Dynamic Convolver</h1>
+  <div class="plugin-thumbnail--{{ page.thumbnail_size }}">
+    <img src="{{ page.thumb }}"
+          alt="Image of Dynamic Convolver Plugin">
+    <div>  
+      <div class="title-text">
+        <p> The Dynamic Convolver is a convolution plugin that implements the standard convolution algorithm with the additional ability to edit the convolution file in real-time for experimental sound design. The goal for this plugin was to make it easy to experiment with different Impulse Response files during real-time convolution processing. This plugin makes this easy by providing an editable region of uploaded file that can be altered in real-time. </p>
+        <p>The main control window gives users control over the start position, region length, and playback speed (which also doubles as a tuning parameter). Additional processing controls in the pre and post sections allow for precise shaping of the input and output signal, opening up a wide range of sonic experimentation.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -25,7 +26,7 @@ excerpt: "A convolution reverb plugin that allows dynamic selection of the convo
 <h2>Audio Demo</h2>
 The examples below showcase various convolution processing results using different impulse response files. Each file is the convolution processing result between the raw file, and the description of the file above. 
 <div class="audio-demo">
-  <div class="unprocessed">
+  <div class="audio-player">
       <p>Raw Piano</p>
     <audio controls style="width:100%;">
       <source src="/assets/audio/DynamicConvolver/Raw Piano-MP3.mp3" type="audio/mpeg">
@@ -43,7 +44,7 @@ The examples below showcase various convolution processing results using differe
       <source src="/assets/audio/DynamicConvolver/Reversed_Piano-MP3.mp3" type="audio/mpeg">
     </audio>
   </div>
-  <div class="audio-end">
+  <div class="audio-player">
      <p>Bass Drum</p>
     <audio controls style="width:100%;">
       <source src="/assets/audio/DynamicConvolver/Piano_BassDrum-MP3.mp3" type="audio/mpeg">
@@ -53,7 +54,7 @@ The examples below showcase various convolution processing results using differe
 
 
 <div class="audio-demo">
-  <div class="unprocessed">    
+  <div class="audio-player">    
       <p>Raw Drums</p>
     <audio controls style="width:100%;">
       <source src="/assets/audio/DynamicConvolver/Drums_Raw-MP3.mp3" type="audio/mpeg">
@@ -77,7 +78,7 @@ The examples below showcase various convolution processing results using differe
       <source src="/assets/audio/DynamicConvolver/Drums_BassGrowl-MP3.mp3" type="audio/mpeg">
     </audio>
   </div>
-  <div class="audio-end">
+  <div class="audio-player">
       <p>Synth FX</p>
     <audio controls style="width:100%;">
       <source src="/assets/audio/DynamicConvolver/Drums_Hops-MP3.mp3" type="audio/mpeg">

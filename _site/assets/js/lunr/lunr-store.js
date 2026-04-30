@@ -54,7 +54,7 @@ var store = [{
         "teaser": "/assets/images/output.jpg"
       },{
         "title": "Spectral Processor",
-        "excerpt":"Spectral Processor View on GitHub About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder....","categories": [],
+        "excerpt":"Spectral Processor About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s...","categories": [],
         "tags": [],
         "url": "/plugins/spectralprocessor/",
         "teaser": "/assets/images/output.jpg"

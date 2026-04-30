@@ -1,14 +1,17 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
 <html lang="en-US" class="no-js">
   <head>
-    <meta charset="utf-8">
+    
+<meta charset="utf-8">
+
 
 <!-- begin _includes/seo.html --><title>Plugins - Ben Ward - Audio DSP Developer</title>
 <meta name="description" content="A Website to highlight my work in audio developement, particularly my plugins">
@@ -30,6 +33,9 @@
 
 
   <meta property="og:image" content="http://localhost:4000/assets/images/panular.png">
+  
+
+
 
 
 
@@ -94,7 +100,8 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <body class="layout--splash wide" dir="ltr">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -104,10 +111,11 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Ben Ward - Audio DSP Developer
@@ -166,6 +174,7 @@
 
 
 
+
 <div class="page__hero--overlay"
   style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/panular.png');"
 >
@@ -179,6 +188,7 @@
       </h1>
       
       
+
 
 
       
@@ -202,66 +212,80 @@
   
   <p>All of the plugin pages contain links to my github where the source code can be downloaded. Some of these plugins were made with tools like Csound, Max/MSP, and RNBO, while others are in C++ with JUCE or other libraries. Each page will highlight the language used, as well as outline any intersting methods if relevant</p><div class="plugin-grid"><div class="plugin-card">
         <div class="meta">
-          <h2>Dynamic Convolver</h2><ul class="tags"></ul></div>
+          <h2>Dynamic Convolver</h2></div>
           <a class="plugin-card-body" href="/plugins/dynamicconvolver/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/dynamic-convolver.png" alt="Dynamic Convolver" />
             </div>
-            <p>A convolution reverb plugin that allows dynamic selection of the convolution region of a user uploaded impulse response file. Also features an array of additional pre- and post-proceessing.</p>
+            <div class="thumb-text">
+              <p>A convolution reverb plugin that allows dynamic selection of the convolution region of a user uploaded impulse response file. Also features an array of additional pre- and post-proceessing.</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Dynamic Convolver (JUCE)</h2><ul class="tags"></ul></div>
+          <h2>Dynamic Convolver (JUCE)</h2></div>
           <a class="plugin-card-body" href="/plugins/dynamicconvolver-juce/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/dConv(JUCE).png" alt="Dynamic Convolver (JUCE)" />
             </div>
-            <p>A Dynamic Convolution plugin, inspiried by an earlier convolution plugin made with Csound, updated with the JUCE framework.</p>
+            <div class="thumb-text">
+              <p>A Dynamic Convolution plugin, inspiried by an earlier convolution plugin made with Csound, updated with the JUCE framework.</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Mapping Sequencer</h2><ul class="tags"></ul></div>
+          <h2>Mapping Sequencer</h2></div>
           <a class="plugin-card-body" href="/plugins/mapping-sequencer/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/mapping-sequencer.png" alt="Mapping Sequencer" />
             </div>
-            <p>A Max for Live sequencer that allows mapping of the sequencer output to any automatable parameter within Ableton Live. Features common sequencer controls, such as presets, pattern scaling, and sequence length</p>
+            <div class="thumb-text">
+              <p>A Max for Live sequencer that allows mapping of the sequencer output to any automatable parameter within Ableton Live. Features common sequencer controls, such as presets, pattern scaling, and sequence length</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Pulse</h2><ul class="tags"></ul></div>
+          <h2>Pulse</h2></div>
           <a class="plugin-card-body" href="/plugins/pulse/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/pulse.png" alt="Pulse" />
             </div>
-            <p>A Drum Sound design synthesizer made with Csound. Features FM, noise, and basic oscillator for generators and a range of modulation options for shaping the transient and overall tone.</p>
+            <div class="thumb-text">
+              <p>A Drum Sound design synthesizer made with Csound. Features FM, noise, and basic oscillator for generators and a range of modulation options for shaping the transient and overall tone.</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Sample Sequencer</h2><ul class="tags"></ul></div>
+          <h2>Sample Sequencer</h2></div>
           <a class="plugin-card-body" href="/plugins/sample-sequencer/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/sample-sequencer.png" alt="Sample Sequencer" />
             </div>
-            <p>A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport</p>
+            <div class="thumb-text">
+              <p>A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Schroeder Verb</h2><ul class="tags"></ul></div>
+          <h2>Schroeder Verb</h2></div>
           <a class="plugin-card-body" href="/plugins/schroder/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/schroeder.png" alt="Schroeder Verb" />
             </div>
-            <p>A simple and cheap reverb that copies the earlier reverb designs from Manfred Schroeder in the 1960s. Made using Csound and delay opcodes to mimic the original design.</p>
+            <div class="thumb-text">
+              <p>A simple and cheap reverb that copies the earlier reverb designs from Manfred Schroeder in the 1960s. Made using Csound and delay opcodes to mimic the original design.</p>
+            </div>
           </a>
       </div><div class="plugin-card">
         <div class="meta">
-          <h2>Spectral Processor</h2><ul class="tags"></ul></div>
+          <h2>Spectral Processor</h2></div>
           <a class="plugin-card-body" href="/plugins/spectralprocessor/">
-            <div class="thumb">
+            <div class="plugin-thumbnail">
               <img src="/assets/plugins/specGrain.png" alt="Spectral Processor" />
             </div>
-            <p>An experimental spectral processing plugin that features some basic, and experimental, effects that utilize the spectral capabilities of the Phase Vocoder. Features pitch shifting, blur, stretch, and spectral delay with additional parameters.</p>
+            <div class="thumb-text">
+              <p>An experimental spectral processing plugin that features some basic, and experimental, effects that utilize the spectral capabilities of the Phase Vocoder. Features pitch shifting, blur, stretch, and spectral delay with additional parameters.</p>
+            </div>
           </a>
       </div></div></div>
 
@@ -280,6 +304,7 @@
 
 <!-- end custom footer snippets -->
         
+
 
 <div class="page__footer-follow">
   <ul class="social-icons">
@@ -304,7 +329,7 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
@@ -316,7 +341,9 @@
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
+
 
 
 

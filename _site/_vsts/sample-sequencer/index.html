@@ -1,14 +1,17 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
-  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 
 <html lang="en-US" class="no-js">
   <head>
-    <meta charset="utf-8">
+    
+<meta charset="utf-8">
+
 
 <!-- begin _includes/seo.html --><title>Sample Sequencer - Ben Ward - Audio DSP Developer</title>
 <meta name="description" content="A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport">
@@ -26,6 +29,8 @@
 
 
   <meta property="og:description" content="A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport">
+
+
 
 
 
@@ -92,7 +97,8 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <body class="layout--splash wide" dir="ltr">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -102,10 +108,11 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Ben Ward - Audio DSP Developer
@@ -167,13 +174,30 @@
     <section class="page__content" itemprop="text">
       <div class="plugin-content-page">
     <h1>Sample Sequencer</h1>
-    <div class="flex-container">
+    <div class="plugin-thumbnail--wide">
         <img src="/assets/plugins/sample-sequencer.png" alt="Image of Mapping Sequencer" />
     </div>
     <h2 class="plugin-content-page">About</h2>
     <p>The Sample Sequencer is a Max4Live device that allows for controlling the splicing of and manipulation of an uploaded audio file via an 8 step sequencer. This device was inspired by some of the unique, stuttering effect produced by artist who incorperate unique sampling operations into their music. This sound, combined with my love of sequencers, inspired me to create this instrument.</p>
     <p>Along with basic sequencing features, this devices allows for indpendant control of playback speed, sequencer duration, gain, and sample position for each individual steps. Furthermore, the onscreen display will preview the location for each step, allowing for precise control of the step's playback position.</p>
 </div>
+
+<h2 id="download-and-links">Download and Links</h2>
+
+<div class="link-container">
+  <div class="plugin-links">
+      <a href="https://github.com/Bohr33/MaxMSP-Devices" class="btn btn-primary" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+      </a>
+  </div>
+</div>
+
+<h2>Technical Details</h2>
+<ul>
+  <li><strong>Format</strong>: Max4Live</li>
+  <li><strong>Built With</strong>: Max 8/Max4Live</li>
+  <li><strong>OS</strong>: macOS</li>
+</ul>
 
     </section>
   </article>
@@ -190,6 +214,7 @@
 
 <!-- end custom footer snippets -->
         
+
 
 <div class="page__footer-follow">
   <ul class="social-icons">
@@ -214,7 +239,7 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
@@ -226,7 +251,9 @@
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
+
 
 
 

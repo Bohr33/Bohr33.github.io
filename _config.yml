@@ -126,7 +126,7 @@ collections:
 author:
   name             : "Ben Ward"
   avatar           : "/assets/images/me/Headshot2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Audio Developer, Researcher, and Musician"
+  bio              : "Audio Developer and Musician"
   location         : "West Michigan"
   email            :  "brw775586@gmail.com"
   links:
@@ -320,9 +320,9 @@ defaults:
       image: /assets/images/bio-photo.jpg
   - scope:
       path: ""
-      typee: projects
-    values:
-      layout: projects
+      type: projects
+    # values:
+    #   layout: projects
 
 
 
