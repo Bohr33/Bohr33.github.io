@@ -17,7 +17,7 @@ permalink: /plugins/
 
   {%- assign items = site.vsts -%}
   {%- if items and items.size > 0 -%}
-    {%- assign items = items | sort: "weight" -%}
+    {%- assign items = items | sort: "order" -%}
     <div class="plugin-grid">
         {%- for item in items -%}
       <div class="plugin-card">

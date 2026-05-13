@@ -5,6 +5,7 @@ title: "Dynamic Convolver (JUCE)"
 author_profile: false
 thumb: /assets/plugins/dConv(JUCE).png
 excerpt: "A Dynamic Convolution plugin, inspiried by an earlier convolution plugin made with Csound, updated with the JUCE framework."
+order: 1
 ---
 
 

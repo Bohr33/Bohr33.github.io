@@ -6,6 +6,7 @@ author_profile: false
 thumb: /assets/plugins/specGrain.png
 thumbnail_size: wide;
 excerpt: "An experimental spectral processing plugin that features some basic, and experimental, effects that utilize the spectral capabilities of the Phase Vocoder. Features pitch shifting, blur, stretch, and spectral delay with additional parameters."
+order: 2
 ---
 
 

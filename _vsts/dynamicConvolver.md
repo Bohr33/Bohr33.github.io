@@ -6,6 +6,7 @@ author_profile: false
 thumb: /assets/plugins/dynamic-convolver.png
 thumbnail_size: "wide"
 excerpt: "A convolution reverb plugin that allows dynamic selection of the convolution region of a user uploaded impulse response file. Also features an array of additional pre- and post-proceessing."
+order: 3
 ---
 
 

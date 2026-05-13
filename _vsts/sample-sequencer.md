@@ -6,6 +6,7 @@ author_profile: false
 thumb: /assets/plugins/sample-sequencer.png
 thumbnail_size: "wide"
 excerpt: "A Max for Live instrument that combines sequencing with sampling by allowing the user to save file playback options into saved steps which are played back by the sequencer via the global transport"
+order: 6
 ---
 <div class="plugin-content-page">
     <h1>Sample Sequencer</h1>
