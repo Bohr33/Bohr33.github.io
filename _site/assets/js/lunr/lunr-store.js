@@ -17,6 +17,12 @@ var store = [{
         "url": "/projects/iannix-mobius/",
         "teaser": "/assets/images/output.jpg"
       },{
+        "title": "PVExperiments",
+        "excerpt":"PVExperiments About PVExperiments began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s Spectral Processing book...","categories": [],
+        "tags": [],
+        "url": "/plugins/pvexperiments/",
+        "teaser": "/assets/images/output.jpg"
+      },{
         "title": "Dynamic Convolver",
         "excerpt":"Dynamic Convolver The Dynamic Convolver is a convolution plugin that implements the standard convolution algorithm with the additional ability to edit the convolution file in real-time for experimental sound design. The goal for this plugin was to make it easy to experiment with different Impulse Response files during real-time convolution...","categories": [],
         "tags": [],
@@ -51,11 +57,5 @@ var store = [{
         "excerpt":"Schroeder-Verb About I made this plugin while I was learning the basic of Cabbage plugin design and thought that emulation of an early digital reverb would make a great starting project. The emulated reverb in this plugin is objectively very cheap sounded, and pales in comparison to modern reverb emulations,...","categories": [],
         "tags": [],
         "url": "/plugins/schroder/",
-        "teaser": "/assets/images/output.jpg"
-      },{
-        "title": "Spectral Processor",
-        "excerpt":"Spectral Processor About The Spectral Processor began as a project for my master’s program, originally focused on implementing a phase-vocoder-based pitch-shifting system. The task proved challenging, but once the pitch shifter was working reliably, I became interested in exploring the wider creative possibilities of the phase vocoder. Using Victor Lazzarini’s...","categories": [],
-        "tags": [],
-        "url": "/plugins/spectralprocessor/",
         "teaser": "/assets/images/output.jpg"
       }]

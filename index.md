@@ -2,7 +2,7 @@
 layout: home
 classes: wide
 title: "Home"
-author_profile: true
+author_profile: false
 header:
   overlay_image: /assets/images/panular.png
   overlay_filter: 0.5

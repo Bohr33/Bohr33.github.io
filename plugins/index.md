@@ -1,6 +1,6 @@
 ---
 layout: splash
-classes: wide
+classes: none
 title: "Plugins"
 author_profile: false
 header:
@@ -13,7 +13,7 @@ permalink: /plugins/
 <div>
   <p>As an audio programmer who is interested in the creative applications of DSP, one of my favorite ways of experimenting with and learning about new DSP effects is by creating a plugin with the effect. This not only gives me experience working with the DSP on a hands on level, but also creates a meaningful and useful tool once done. Because I've made of many of these devices for school and other projects, I've decided to host them all here to both showcase my work, and allow others to download and expirement with them as well</p>
   
-  <p>All of the plugin pages contain links to my github where the source code can be downloaded. Some of these plugins were made with tools like Csound, Max/MSP, and RNBO, while others are in C++ with JUCE or other libraries. Each page will highlight the language used, as well as outline any intersting methods if relevant</p>
+  <p>All of the plugin pages contain links to my github where the source code can be downloaded. Some of these plugins were made with tools like Csound, Max/MSP, and RNBO, while others are in C++ with JUCE or other libraries.</p>
 
   {%- assign items = site.vsts -%}
   {%- if items and items.size > 0 -%}

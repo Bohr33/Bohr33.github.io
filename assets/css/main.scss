@@ -135,23 +135,32 @@ body {
   flex: 3
 }
 
-.plugin-card-body .plugin-thumbnail
+.plugin-card-body
 {
-  flex: 2;
-    // width: 16em;
   width: 100%;
-  margin-right: 1rem;
   display: flex;
+  margin-right: 1rem;
+ 
   justify-content: center;
 }
 
+.plugin-thumbnail
+{
+  flex: 2;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+
+}
+
 .plugin-card-body img {
-  // flex: 2;
-  margin-top: 1rem;
-  object-fit: cover;
+  flex: 2;
+  margin-top: rem;
+  margin: 1rem;;
+  object-fit: contain;
   border-right: 20px solid black;
   border-bottom: 10px solid black;
-  max-height: 200px;;
+  // max-height: 200px;;
 }
 
 .plugin-card .meta {
@@ -207,12 +216,17 @@ body {
 
 }
 
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
 .plugin-content-page img{
-  max-width: 60%;
+  
+  max-width: 80%;
   max-height:20rem;
-  float: left;
-  margin-right: 1rem;
-  opacity: 80%;
 }
 
 .plugin-content-page h1{
@@ -226,7 +240,7 @@ body {
 }
 
 .plugin-thumbnail img{
-  max-width: 60%;
+  // max-width: 60%;
   max-height:20rem;
   float: left;
   margin-right: 1rem;
